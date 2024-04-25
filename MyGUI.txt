@@ -1,0 +1,1113 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Main = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local AboutFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local AboutUS = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local AutoFarm = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local TradeScam = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local MailBoxDupe = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local FASTEGGHATCH = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local MISC = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_9 = Instance.new("UICorner")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
+local AUTODIGFISH = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
+local AutoFrame = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint")
+local Frame_2 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint")
+local TextButton_7 = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint")
+local TextButton_8 = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint")
+local MiniFrame = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local TextButton_9 = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint")
+local TextButton_10 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint")
+local TextButton_11 = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local UIAspectRatioConstraint_25 = Instance.new("UIAspectRatioConstraint")
+local TextButton_12 = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local UIAspectRatioConstraint_26 = Instance.new("UIAspectRatioConstraint")
+local TextButton_13 = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local UIAspectRatioConstraint_27 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_28 = Instance.new("UIAspectRatioConstraint")
+local TradeFrame = Instance.new("Frame")
+local UICorner_28 = Instance.new("UICorner")
+local TextButton_14 = Instance.new("TextButton")
+local UICorner_29 = Instance.new("UICorner")
+local UIAspectRatioConstraint_29 = Instance.new("UIAspectRatioConstraint")
+local TextButton_15 = Instance.new("TextButton")
+local UICorner_30 = Instance.new("UICorner")
+local UIAspectRatioConstraint_30 = Instance.new("UIAspectRatioConstraint")
+local TextButton_16 = Instance.new("TextButton")
+local UICorner_31 = Instance.new("UICorner")
+local UIAspectRatioConstraint_31 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_32 = Instance.new("UIAspectRatioConstraint")
+local MailFrame = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_33 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_34 = Instance.new("UIAspectRatioConstraint")
+local FastFrame = Instance.new("Frame")
+local UICorner_33 = Instance.new("UICorner")
+local TextButton_17 = Instance.new("TextButton")
+local UICorner_34 = Instance.new("UICorner")
+local UIAspectRatioConstraint_35 = Instance.new("UIAspectRatioConstraint")
+local TextButton_18 = Instance.new("TextButton")
+local UICorner_35 = Instance.new("UICorner")
+local UIAspectRatioConstraint_36 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_4 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_37 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_38 = Instance.new("UIAspectRatioConstraint")
+local MiscFrame = Instance.new("Frame")
+local UICorner_36 = Instance.new("UICorner")
+local UICorner_37 = Instance.new("UICorner")
+local UICorner_38 = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local TextButton_19 = Instance.new("TextButton")
+local UICorner_39 = Instance.new("UICorner")
+local UIAspectRatioConstraint_39 = Instance.new("UIAspectRatioConstraint")
+local TextButton_20 = Instance.new("TextButton")
+local UICorner_40 = Instance.new("UICorner")
+local UIAspectRatioConstraint_40 = Instance.new("UIAspectRatioConstraint")
+local TextButton_21 = Instance.new("TextButton")
+local UICorner_41 = Instance.new("UICorner")
+local UIAspectRatioConstraint_41 = Instance.new("UIAspectRatioConstraint")
+local TextButton_22 = Instance.new("TextButton")
+local UICorner_42 = Instance.new("UICorner")
+local UIAspectRatioConstraint_42 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_43 = Instance.new("UIAspectRatioConstraint")
+local Frame_4 = Instance.new("Frame")
+local TextButton_23 = Instance.new("TextButton")
+local UICorner_43 = Instance.new("UICorner")
+local UIAspectRatioConstraint_44 = Instance.new("UIAspectRatioConstraint")
+local TextButton_24 = Instance.new("TextButton")
+local UICorner_44 = Instance.new("UICorner")
+local UIAspectRatioConstraint_45 = Instance.new("UIAspectRatioConstraint")
+local TextButton_25 = Instance.new("TextButton")
+local UICorner_45 = Instance.new("UICorner")
+local UIAspectRatioConstraint_46 = Instance.new("UIAspectRatioConstraint")
+local TextButton_26 = Instance.new("TextButton")
+local UICorner_46 = Instance.new("UICorner")
+local UIAspectRatioConstraint_47 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_48 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_49 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_50 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+Main.Name = "Main"
+Main.Parent = game.Workspace
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Main
+MainFrame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.266548991, 0, 0.22292994, 0)
+MainFrame.Size = UDim2.new(0.342052311, 0, 0.625796199, 0)
+MainFrame.Visible = false
+
+UICorner.Parent = MainFrame
+
+AboutFrame.Name = "AboutFrame"
+AboutFrame.Parent = MainFrame
+AboutFrame.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+AboutFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AboutFrame.BorderSizePixel = 0
+AboutFrame.Position = UDim2.new(0.270588249, 0, 0.208651394, 0)
+AboutFrame.Size = UDim2.new(0.69607842, 0, 0.725190818, 0)
+
+UICorner_2.Parent = AboutFrame
+
+TextLabel.Parent = AboutFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0957746506, 0, 0.147368416, 0)
+TextLabel.Size = UDim2.new(0.85915494, 0, 0.701754391, 0)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "THANKS FOR USING THE SCRIPT"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = TextLabel
+UIAspectRatioConstraint.AspectRatio = 1.525
+
+UIAspectRatioConstraint_2.Parent = AboutFrame
+UIAspectRatioConstraint_2.AspectRatio = 1.246
+
+AboutUS.Name = "AboutUS"
+AboutUS.Parent = MainFrame
+AboutUS.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+AboutUS.BorderColor3 = Color3.fromRGB(255, 0, 127)
+AboutUS.BorderSizePixel = 0
+AboutUS.Position = UDim2.new(0.0196078438, 0, 0.284987271, 0)
+AboutUS.Size = UDim2.new(0.237254903, 0, 0.0737913474, 0)
+AboutUS.Font = Enum.Font.Unknown
+AboutUS.Text = "About US"
+AboutUS.TextColor3 = Color3.fromRGB(255, 255, 255)
+AboutUS.TextScaled = true
+AboutUS.TextSize = 14.000
+AboutUS.TextWrapped = true
+
+UICorner_3.Parent = AboutUS
+
+UIAspectRatioConstraint_3.Parent = AboutUS
+UIAspectRatioConstraint_3.AspectRatio = 4.172
+
+AutoFarm.Name = "AutoFarm"
+AutoFarm.Parent = MainFrame
+AutoFarm.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+AutoFarm.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarm.BorderSizePixel = 0
+AutoFarm.Position = UDim2.new(0.0196078438, 0, 0.374045789, 0)
+AutoFarm.Size = UDim2.new(0.237254903, 0, 0.0737913474, 0)
+AutoFarm.Font = Enum.Font.Unknown
+AutoFarm.Text = "Auto Farm"
+AutoFarm.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoFarm.TextScaled = true
+AutoFarm.TextSize = 14.000
+AutoFarm.TextWrapped = true
+
+UICorner_4.Parent = AutoFarm
+
+UIAspectRatioConstraint_4.Parent = AutoFarm
+UIAspectRatioConstraint_4.AspectRatio = 4.172
+
+TradeScam.Name = "TradeScam"
+TradeScam.Parent = MainFrame
+TradeScam.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TradeScam.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TradeScam.BorderSizePixel = 0
+TradeScam.Position = UDim2.new(0.0196078438, 0, 0.554707408, 0)
+TradeScam.Size = UDim2.new(0.237254903, 0, 0.0737913474, 0)
+TradeScam.Font = Enum.Font.Unknown
+TradeScam.Text = "Trade Scam"
+TradeScam.TextColor3 = Color3.fromRGB(255, 255, 255)
+TradeScam.TextScaled = true
+TradeScam.TextSize = 14.000
+TradeScam.TextWrapped = true
+
+UICorner_5.Parent = TradeScam
+
+UIAspectRatioConstraint_5.Parent = TradeScam
+UIAspectRatioConstraint_5.AspectRatio = 4.172
+
+MailBoxDupe.Name = "MailBoxDupe"
+MailBoxDupe.Parent = MainFrame
+MailBoxDupe.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+MailBoxDupe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MailBoxDupe.BorderSizePixel = 0
+MailBoxDupe.Position = UDim2.new(0.0196078438, 0, 0.643765926, 0)
+MailBoxDupe.Size = UDim2.new(0.237254903, 0, 0.0737913474, 0)
+MailBoxDupe.Font = Enum.Font.Unknown
+MailBoxDupe.Text = "MAILBOXDUPE"
+MailBoxDupe.TextColor3 = Color3.fromRGB(255, 255, 255)
+MailBoxDupe.TextScaled = true
+MailBoxDupe.TextSize = 14.000
+MailBoxDupe.TextWrapped = true
+
+UICorner_6.Parent = MailBoxDupe
+
+UIAspectRatioConstraint_6.Parent = MailBoxDupe
+UIAspectRatioConstraint_6.AspectRatio = 4.172
+
+FASTEGGHATCH.Name = "FAST EGG HATCH"
+FASTEGGHATCH.Parent = MainFrame
+FASTEGGHATCH.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+FASTEGGHATCH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FASTEGGHATCH.BorderSizePixel = 0
+FASTEGGHATCH.Position = UDim2.new(0.0196078438, 0, 0.732824445, 0)
+FASTEGGHATCH.Size = UDim2.new(0.237254903, 0, 0.0737913474, 0)
+FASTEGGHATCH.Font = Enum.Font.Unknown
+FASTEGGHATCH.Text = "Fast Hatch"
+FASTEGGHATCH.TextColor3 = Color3.fromRGB(255, 255, 255)
+FASTEGGHATCH.TextScaled = true
+FASTEGGHATCH.TextSize = 14.000
+FASTEGGHATCH.TextWrapped = true
+
+UICorner_7.Parent = FASTEGGHATCH
+
+UIAspectRatioConstraint_7.Parent = FASTEGGHATCH
+UIAspectRatioConstraint_7.AspectRatio = 4.172
+
+MISC.Name = "MISC"
+MISC.Parent = MainFrame
+MISC.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+MISC.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MISC.BorderSizePixel = 0
+MISC.Position = UDim2.new(0.0196078438, 0, 0.824427485, 0)
+MISC.Size = UDim2.new(0.237254903, 0, 0.0737913474, 0)
+MISC.Font = Enum.Font.Unknown
+MISC.Text = "Misc"
+MISC.TextColor3 = Color3.fromRGB(255, 255, 255)
+MISC.TextScaled = true
+MISC.TextSize = 14.000
+MISC.TextWrapped = true
+
+UICorner_8.Parent = MISC
+
+UIAspectRatioConstraint_8.Parent = MISC
+UIAspectRatioConstraint_8.AspectRatio = 4.172
+
+ImageLabel.Parent = MainFrame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(255, 0, 255)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0411764719, 0, 0.0407124683, 0)
+ImageLabel.Size = UDim2.new(0.166666672, 0, 0.19338423, 0)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=17282448059"
+
+UICorner_9.CornerRadius = UDim.new(0, 60)
+UICorner_9.Parent = ImageLabel
+
+UIAspectRatioConstraint_9.Parent = ImageLabel
+UIAspectRatioConstraint_9.AspectRatio = 1.118
+
+TextLabel_2.Parent = MainFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.349019617, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0.511764705, 0, 0.24427481, 0)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "AquaFlowX🌊"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+UIAspectRatioConstraint_10.Parent = TextLabel_2
+UIAspectRatioConstraint_10.AspectRatio = 2.719
+
+AUTODIGFISH.Name = "AUTO DIG/FISH"
+AUTODIGFISH.Parent = MainFrame
+AUTODIGFISH.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+AUTODIGFISH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AUTODIGFISH.BorderSizePixel = 0
+AUTODIGFISH.Position = UDim2.new(0.0196078438, 0, 0.463104337, 0)
+AUTODIGFISH.Size = UDim2.new(0.237254903, 0, 0.0737913474, 0)
+AUTODIGFISH.Font = Enum.Font.Unknown
+AUTODIGFISH.Text = "MiniGames"
+AUTODIGFISH.TextColor3 = Color3.fromRGB(255, 255, 255)
+AUTODIGFISH.TextScaled = true
+AUTODIGFISH.TextSize = 14.000
+AUTODIGFISH.TextWrapped = true
+
+UICorner_10.Parent = AUTODIGFISH
+
+UIAspectRatioConstraint_11.Parent = AUTODIGFISH
+UIAspectRatioConstraint_11.AspectRatio = 4.172
+
+AutoFrame.Name = "AutoFrame"
+AutoFrame.Parent = MainFrame
+AutoFrame.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+AutoFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoFrame.BorderSizePixel = 0
+AutoFrame.Position = UDim2.new(0.270588249, 0, 0.208651394, 0)
+AutoFrame.Size = UDim2.new(0.69607842, 0, 0.725190818, 0)
+AutoFrame.Visible = false
+
+UICorner_11.Parent = AutoFrame
+
+Frame.Parent = AutoFrame
+Frame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0422535203, 0, 0.249122813, 0)
+Frame.Size = UDim2.new(0.405633807, 0, 0.701754391, 0)
+
+UICorner_12.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0486111119, 0, 0.0700000003, 0)
+TextButton.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "Auto Unlock Areas"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_13.Parent = TextButton
+
+UIAspectRatioConstraint_12.Parent = TextButton
+UIAspectRatioConstraint_12.AspectRatio = 3.514
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.0486111119, 0, 0.5, 0)
+TextButton_2.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_2.Font = Enum.Font.Unknown
+TextButton_2.Text = "Auto Claim LootBags"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_14.Parent = TextButton_2
+
+UIAspectRatioConstraint_13.Parent = TextButton_2
+UIAspectRatioConstraint_13.AspectRatio = 3.514
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.0486111119, 0, 0.284999996, 0)
+TextButton_3.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_3.Font = Enum.Font.Unknown
+TextButton_3.Text = "Auto Hatch"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+UICorner_15.Parent = TextButton_3
+
+UIAspectRatioConstraint_14.Parent = TextButton_3
+UIAspectRatioConstraint_14.AspectRatio = 3.514
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.0486111119, 0, 0.714999974, 0)
+TextButton_4.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_4.Font = Enum.Font.Unknown
+TextButton_4.Text = "Reduce Lag"
+TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+UICorner_16.Parent = TextButton_4
+
+UIAspectRatioConstraint_15.Parent = TextButton_4
+UIAspectRatioConstraint_15.AspectRatio = 3.514
+
+UIAspectRatioConstraint_16.Parent = Frame
+UIAspectRatioConstraint_16.AspectRatio = 0.720
+
+Frame_2.Parent = AutoFrame
+Frame_2.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.546478868, 0, 0.249122813, 0)
+Frame_2.Size = UDim2.new(0.405633807, 0, 0.701754391, 0)
+
+UICorner_17.Parent = Frame_2
+
+TextButton_5.Parent = Frame_2
+TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.0486111119, 0, 0.0700000003, 0)
+TextButton_5.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_5.Font = Enum.Font.Unknown
+TextButton_5.Text = "Auto Pop Balloon"
+TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
+UICorner_18.Parent = TextButton_5
+
+UIAspectRatioConstraint_17.Parent = TextButton_5
+UIAspectRatioConstraint_17.AspectRatio = 3.514
+
+TextButton_6.Parent = Frame_2
+TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderSizePixel = 0
+TextButton_6.Position = UDim2.new(0.0486111119, 0, 0.284999996, 0)
+TextButton_6.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_6.Font = Enum.Font.Unknown
+TextButton_6.Text = "Auto Use Potions"
+TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+
+UICorner_19.Parent = TextButton_6
+
+UIAspectRatioConstraint_18.Parent = TextButton_6
+UIAspectRatioConstraint_18.AspectRatio = 3.514
+
+TextButton_7.Parent = Frame_2
+TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.BorderSizePixel = 0
+TextButton_7.Position = UDim2.new(0.0486111119, 0, 0.5, 0)
+TextButton_7.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_7.Font = Enum.Font.Unknown
+TextButton_7.Text = "Auto Consume Fruits"
+TextButton_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 14.000
+TextButton_7.TextWrapped = true
+
+UICorner_20.Parent = TextButton_7
+
+UIAspectRatioConstraint_19.Parent = TextButton_7
+UIAspectRatioConstraint_19.AspectRatio = 3.514
+
+TextButton_8.Parent = Frame_2
+TextButton_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.BorderSizePixel = 0
+TextButton_8.Position = UDim2.new(0.0486111119, 0, 0.714999974, 0)
+TextButton_8.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_8.Font = Enum.Font.Unknown
+TextButton_8.Text = "Auto Use Ultimate"
+TextButton_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14.000
+TextButton_8.TextWrapped = true
+
+UICorner_21.Parent = TextButton_8
+
+UIAspectRatioConstraint_20.Parent = TextButton_8
+UIAspectRatioConstraint_20.AspectRatio = 3.514
+
+UIAspectRatioConstraint_21.Parent = Frame_2
+UIAspectRatioConstraint_21.AspectRatio = 0.720
+
+UIAspectRatioConstraint_22.Parent = AutoFrame
+UIAspectRatioConstraint_22.AspectRatio = 1.246
+
+MiniFrame.Name = "MiniFrame"
+MiniFrame.Parent = MainFrame
+MiniFrame.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+MiniFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MiniFrame.BorderSizePixel = 0
+MiniFrame.Position = UDim2.new(0.270588249, 0, 0.208651394, 0)
+MiniFrame.Size = UDim2.new(0.69607842, 0, 0.725190818, 0)
+MiniFrame.Visible = false
+
+UICorner_22.Parent = MiniFrame
+
+TextButton_9.Parent = MiniFrame
+TextButton_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_9.BorderSizePixel = 0
+TextButton_9.Position = UDim2.new(0.180281684, 0, 0.22807017, 0)
+TextButton_9.Size = UDim2.new(0.563380301, 0, 0.175438598, 0)
+TextButton_9.Font = Enum.Font.Unknown
+TextButton_9.Text = "Auto Fish"
+TextButton_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_9.TextScaled = true
+TextButton_9.TextSize = 14.000
+TextButton_9.TextWrapped = true
+
+UICorner_23.Parent = TextButton_9
+
+UIAspectRatioConstraint_23.Parent = TextButton_9
+UIAspectRatioConstraint_23.AspectRatio = 4.000
+
+TextButton_10.Parent = MiniFrame
+TextButton_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.BorderSizePixel = 0
+TextButton_10.Position = UDim2.new(0.180281684, 0, 0.0350877196, 0)
+TextButton_10.Size = UDim2.new(0.563380301, 0, 0.175438598, 0)
+TextButton_10.Font = Enum.Font.Unknown
+TextButton_10.Text = "Auto Finish All Minigames"
+TextButton_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.TextScaled = true
+TextButton_10.TextSize = 14.000
+TextButton_10.TextWrapped = true
+
+UICorner_24.Parent = TextButton_10
+
+UIAspectRatioConstraint_24.Parent = TextButton_10
+UIAspectRatioConstraint_24.AspectRatio = 4.000
+
+TextButton_11.Parent = MiniFrame
+TextButton_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_11.BorderSizePixel = 0
+TextButton_11.Position = UDim2.new(0.180281684, 0, 0.424561411, 0)
+TextButton_11.Size = UDim2.new(0.563380301, 0, 0.175438598, 0)
+TextButton_11.Font = Enum.Font.Unknown
+TextButton_11.Text = "Auto Advance Fish"
+TextButton_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_11.TextScaled = true
+TextButton_11.TextSize = 14.000
+TextButton_11.TextWrapped = true
+
+UICorner_25.Parent = TextButton_11
+
+UIAspectRatioConstraint_25.Parent = TextButton_11
+UIAspectRatioConstraint_25.AspectRatio = 4.000
+
+TextButton_12.Parent = MiniFrame
+TextButton_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_12.BorderSizePixel = 0
+TextButton_12.Position = UDim2.new(0.180281684, 0, 0.621052623, 0)
+TextButton_12.Size = UDim2.new(0.563380301, 0, 0.175438598, 0)
+TextButton_12.Font = Enum.Font.Unknown
+TextButton_12.Text = "Auto Dig"
+TextButton_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_12.TextScaled = true
+TextButton_12.TextSize = 14.000
+TextButton_12.TextWrapped = true
+
+UICorner_26.Parent = TextButton_12
+
+UIAspectRatioConstraint_26.Parent = TextButton_12
+UIAspectRatioConstraint_26.AspectRatio = 4.000
+
+TextButton_13.Parent = MiniFrame
+TextButton_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_13.BorderSizePixel = 0
+TextButton_13.Position = UDim2.new(0.180281684, 0, 0.810526311, 0)
+TextButton_13.Size = UDim2.new(0.563380301, 0, 0.175438598, 0)
+TextButton_13.Font = Enum.Font.Unknown
+TextButton_13.Text = "Auto Advance Dig"
+TextButton_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_13.TextScaled = true
+TextButton_13.TextSize = 14.000
+TextButton_13.TextWrapped = true
+
+UICorner_27.Parent = TextButton_13
+
+UIAspectRatioConstraint_27.Parent = TextButton_13
+UIAspectRatioConstraint_27.AspectRatio = 4.000
+
+UIAspectRatioConstraint_28.Parent = MiniFrame
+UIAspectRatioConstraint_28.AspectRatio = 1.246
+
+TradeFrame.Name = "TradeFrame"
+TradeFrame.Parent = MainFrame
+TradeFrame.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+TradeFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TradeFrame.BorderSizePixel = 0
+TradeFrame.Position = UDim2.new(0.270588249, 0, 0.208651394, 0)
+TradeFrame.Size = UDim2.new(0.69607842, 0, 0.725190818, 0)
+TradeFrame.Visible = false
+
+UICorner_28.Parent = TradeFrame
+
+TextButton_14.Parent = TradeFrame
+TextButton_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_14.BorderSizePixel = 0
+TextButton_14.Position = UDim2.new(0.0619718321, 0, 0.27719298, 0)
+TextButton_14.Size = UDim2.new(0.284507036, 0, 0.301754385, 0)
+TextButton_14.Font = Enum.Font.Unknown
+TextButton_14.Text = "ON"
+TextButton_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_14.TextScaled = true
+TextButton_14.TextSize = 14.000
+TextButton_14.TextWrapped = true
+
+UICorner_29.CornerRadius = UDim.new(0, 50)
+UICorner_29.Parent = TextButton_14
+
+UIAspectRatioConstraint_29.Parent = TextButton_14
+UIAspectRatioConstraint_29.AspectRatio = 1.174
+
+TextButton_15.Parent = TradeFrame
+TextButton_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_15.BorderSizePixel = 0
+TextButton_15.Position = UDim2.new(0.619718313, 0, 0.27719298, 0)
+TextButton_15.Size = UDim2.new(0.284507036, 0, 0.301754385, 0)
+TextButton_15.Font = Enum.Font.Unknown
+TextButton_15.Text = "OFF"
+TextButton_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_15.TextScaled = true
+TextButton_15.TextSize = 14.000
+TextButton_15.TextWrapped = true
+
+UICorner_30.CornerRadius = UDim.new(0, 50)
+UICorner_30.Parent = TextButton_15
+
+UIAspectRatioConstraint_30.Parent = TextButton_15
+UIAspectRatioConstraint_30.AspectRatio = 1.174
+
+TextButton_16.Parent = TradeFrame
+TextButton_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_16.BorderSizePixel = 0
+TextButton_16.Position = UDim2.new(0.197183102, 0, 0.673684239, 0)
+TextButton_16.Size = UDim2.new(0.563380301, 0, 0.175438598, 0)
+TextButton_16.Font = Enum.Font.Unknown
+TextButton_16.Text = "Freeze Trade"
+TextButton_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_16.TextScaled = true
+TextButton_16.TextSize = 14.000
+TextButton_16.TextWrapped = true
+
+UICorner_31.CornerRadius = UDim.new(0, 30)
+UICorner_31.Parent = TextButton_16
+
+UIAspectRatioConstraint_31.Parent = TextButton_16
+UIAspectRatioConstraint_31.AspectRatio = 4.000
+
+UIAspectRatioConstraint_32.Parent = TradeFrame
+UIAspectRatioConstraint_32.AspectRatio = 1.246
+
+MailFrame.Name = "MailFrame"
+MailFrame.Parent = MainFrame
+MailFrame.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+MailFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MailFrame.BorderSizePixel = 0
+MailFrame.Position = UDim2.new(0.270588249, 0, 0.208651394, 0)
+MailFrame.Size = UDim2.new(0.69607842, 0, 0.725190818, 0)
+MailFrame.Visible = false
+
+UICorner_32.Parent = MailFrame
+
+TextLabel_3.Parent = MailFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.067605637, 0, 0.0877192989, 0)
+TextLabel_3.Size = UDim2.new(0.822535217, 0, 0.821052611, 0)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "COMING SOON!"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+UIAspectRatioConstraint_33.Parent = TextLabel_3
+UIAspectRatioConstraint_33.AspectRatio = 1.248
+
+UIAspectRatioConstraint_34.Parent = MailFrame
+UIAspectRatioConstraint_34.AspectRatio = 1.246
+
+FastFrame.Name = "FastFrame"
+FastFrame.Parent = MainFrame
+FastFrame.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+FastFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FastFrame.BorderSizePixel = 0
+FastFrame.Position = UDim2.new(0.270588249, 0, 0.208651394, 0)
+FastFrame.Size = UDim2.new(0.69607842, 0, 0.725190818, 0)
+FastFrame.Visible = false
+
+UICorner_33.Parent = FastFrame
+
+TextButton_17.Parent = FastFrame
+TextButton_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_17.BorderSizePixel = 0
+TextButton_17.Position = UDim2.new(0.0619718321, 0, 0.27719298, 0)
+TextButton_17.Size = UDim2.new(0.284507036, 0, 0.301754385, 0)
+TextButton_17.Font = Enum.Font.Unknown
+TextButton_17.Text = "ON"
+TextButton_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_17.TextScaled = true
+TextButton_17.TextSize = 14.000
+TextButton_17.TextWrapped = true
+
+UICorner_34.CornerRadius = UDim.new(0, 50)
+UICorner_34.Parent = TextButton_17
+
+UIAspectRatioConstraint_35.Parent = TextButton_17
+UIAspectRatioConstraint_35.AspectRatio = 1.174
+
+TextButton_18.Parent = FastFrame
+TextButton_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_18.BorderSizePixel = 0
+TextButton_18.Position = UDim2.new(0.619718313, 0, 0.27719298, 0)
+TextButton_18.Size = UDim2.new(0.284507036, 0, 0.301754385, 0)
+TextButton_18.Font = Enum.Font.Unknown
+TextButton_18.Text = "OFF"
+TextButton_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_18.TextScaled = true
+TextButton_18.TextSize = 14.000
+TextButton_18.TextWrapped = true
+
+UICorner_35.CornerRadius = UDim.new(0, 50)
+UICorner_35.Parent = TextButton_18
+
+UIAspectRatioConstraint_36.Parent = TextButton_18
+UIAspectRatioConstraint_36.AspectRatio = 1.174
+
+TextLabel_4.Parent = FastFrame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.132394373, 0, 0.684210539, 0)
+TextLabel_4.Size = UDim2.new(0.732394338, 0, 0.175438598, 0)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "MAKE SURE TO HATCH EGG FIRST THEN CLICK ON!"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+UIAspectRatioConstraint_37.Parent = TextLabel_4
+UIAspectRatioConstraint_37.AspectRatio = 5.200
+
+UIAspectRatioConstraint_38.Parent = FastFrame
+UIAspectRatioConstraint_38.AspectRatio = 1.246
+
+MiscFrame.Name = "MiscFrame"
+MiscFrame.Parent = MainFrame
+MiscFrame.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+MiscFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MiscFrame.BorderSizePixel = 0
+MiscFrame.Position = UDim2.new(0.270588249, 0, 0.208651394, 0)
+MiscFrame.Size = UDim2.new(0.69607842, 0, 0.725190818, 0)
+MiscFrame.Visible = false
+
+UICorner_36.Parent = MiscFrame
+
+UICorner_37.Parent = MiscFrame
+
+UICorner_38.Parent = MiscFrame
+
+Frame_3.Parent = MiscFrame
+Frame_3.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.0422535203, 0, 0.249122813, 0)
+Frame_3.Size = UDim2.new(0.405633807, 0, 0.701754391, 0)
+
+TextButton_19.Parent = Frame_3
+TextButton_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_19.BorderSizePixel = 0
+TextButton_19.Position = UDim2.new(0.0486111119, 0, 0.0700000003, 0)
+TextButton_19.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_19.Font = Enum.Font.Unknown
+TextButton_19.Text = "Anti MailStealer"
+TextButton_19.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_19.TextScaled = true
+TextButton_19.TextSize = 14.000
+TextButton_19.TextWrapped = true
+
+UICorner_39.Parent = TextButton_19
+
+UIAspectRatioConstraint_39.Parent = TextButton_19
+UIAspectRatioConstraint_39.AspectRatio = 3.514
+
+TextButton_20.Parent = Frame_3
+TextButton_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_20.BorderSizePixel = 0
+TextButton_20.Position = UDim2.new(0.0486111119, 0, 0.5, 0)
+TextButton_20.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_20.Font = Enum.Font.Unknown
+TextButton_20.Text = "Auto Claim Daycare"
+TextButton_20.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_20.TextScaled = true
+TextButton_20.TextSize = 14.000
+TextButton_20.TextWrapped = true
+
+UICorner_40.Parent = TextButton_20
+
+UIAspectRatioConstraint_40.Parent = TextButton_20
+UIAspectRatioConstraint_40.AspectRatio = 3.514
+
+TextButton_21.Parent = Frame_3
+TextButton_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_21.BorderSizePixel = 0
+TextButton_21.Position = UDim2.new(0.0486111119, 0, 0.284999996, 0)
+TextButton_21.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_21.Font = Enum.Font.Unknown
+TextButton_21.Text = "FPS BOOSTER"
+TextButton_21.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_21.TextScaled = true
+TextButton_21.TextSize = 14.000
+TextButton_21.TextWrapped = true
+
+UICorner_41.Parent = TextButton_21
+
+UIAspectRatioConstraint_41.Parent = TextButton_21
+UIAspectRatioConstraint_41.AspectRatio = 3.514
+
+TextButton_22.Parent = Frame_3
+TextButton_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_22.BorderSizePixel = 0
+TextButton_22.Position = UDim2.new(0.0486111119, 0, 0.714999974, 0)
+TextButton_22.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_22.Font = Enum.Font.Unknown
+TextButton_22.Text = "Use All Gamepass"
+TextButton_22.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_22.TextScaled = true
+TextButton_22.TextSize = 14.000
+TextButton_22.TextWrapped = true
+
+UICorner_42.Parent = TextButton_22
+
+UIAspectRatioConstraint_42.Parent = TextButton_22
+UIAspectRatioConstraint_42.AspectRatio = 3.514
+
+UIAspectRatioConstraint_43.Parent = Frame_3
+UIAspectRatioConstraint_43.AspectRatio = 0.720
+
+Frame_4.Parent = MiscFrame
+Frame_4.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(0.546478868, 0, 0.249122813, 0)
+Frame_4.Size = UDim2.new(0.405633807, 0, 0.701754391, 0)
+
+TextButton_23.Parent = Frame_4
+TextButton_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_23.BorderSizePixel = 0
+TextButton_23.Position = UDim2.new(0.0486111119, 0, 0.0700000003, 0)
+TextButton_23.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_23.Font = Enum.Font.Unknown
+TextButton_23.Text = "COMING SOON!"
+TextButton_23.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_23.TextScaled = true
+TextButton_23.TextSize = 14.000
+TextButton_23.TextWrapped = true
+
+UICorner_43.Parent = TextButton_23
+
+UIAspectRatioConstraint_44.Parent = TextButton_23
+UIAspectRatioConstraint_44.AspectRatio = 3.514
+
+TextButton_24.Parent = Frame_4
+TextButton_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_24.BorderSizePixel = 0
+TextButton_24.Position = UDim2.new(0.0486111119, 0, 0.284999996, 0)
+TextButton_24.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_24.Font = Enum.Font.Unknown
+TextButton_24.Text = "COMING SOON!"
+TextButton_24.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_24.TextScaled = true
+TextButton_24.TextSize = 14.000
+TextButton_24.TextWrapped = true
+
+UICorner_44.Parent = TextButton_24
+
+UIAspectRatioConstraint_45.Parent = TextButton_24
+UIAspectRatioConstraint_45.AspectRatio = 3.514
+
+TextButton_25.Parent = Frame_4
+TextButton_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_25.BorderSizePixel = 0
+TextButton_25.Position = UDim2.new(0.0486111119, 0, 0.5, 0)
+TextButton_25.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_25.Font = Enum.Font.Unknown
+TextButton_25.Text = "COMING SOON!"
+TextButton_25.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_25.TextScaled = true
+TextButton_25.TextSize = 14.000
+TextButton_25.TextWrapped = true
+
+UICorner_45.Parent = TextButton_25
+
+UIAspectRatioConstraint_46.Parent = TextButton_25
+UIAspectRatioConstraint_46.AspectRatio = 3.514
+
+TextButton_26.Parent = Frame_4
+TextButton_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_26.BorderSizePixel = 0
+TextButton_26.Position = UDim2.new(0.0486111119, 0, 0.714999974, 0)
+TextButton_26.Size = UDim2.new(0.902777791, 0, 0.185000002, 0)
+TextButton_26.Font = Enum.Font.Unknown
+TextButton_26.Text = "COMING SOON!"
+TextButton_26.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_26.TextScaled = true
+TextButton_26.TextSize = 14.000
+TextButton_26.TextWrapped = true
+
+UICorner_46.Parent = TextButton_26
+
+UIAspectRatioConstraint_47.Parent = TextButton_26
+UIAspectRatioConstraint_47.AspectRatio = 3.514
+
+UIAspectRatioConstraint_48.Parent = Frame_4
+UIAspectRatioConstraint_48.AspectRatio = 0.720
+
+UIAspectRatioConstraint_49.Parent = MiscFrame
+UIAspectRatioConstraint_49.AspectRatio = 1.246
+
+UIAspectRatioConstraint_50.Parent = MainFrame
+UIAspectRatioConstraint_50.AspectRatio = 1.298
+
+-- Scripts:
+
+local function IKQE_fake_script() -- AboutUS.LocalScript 
+	local script = Instance.new('LocalScript', AboutUS)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.AboutFrame.Visible = true
+		script.Parent.Parent.AutoFrame.Visible = false
+		script.Parent.Parent.MiniFrame.Visible = false
+		script.Parent.Parent.TradeFrame.Visible = false
+		script.Parent.Parent.MailFrame.Visible = false
+		script.Parent.Parent.FastFrame.Visible = false
+		script.Parent.Parent.MiscFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(IKQE_fake_script)()
+local function XYIC_fake_script() -- AutoFarm.LocalScript 
+	local script = Instance.new('LocalScript', AutoFarm)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.AboutFrame.Visible = false
+		script.Parent.Parent.AutoFrame.Visible = true
+		script.Parent.Parent.MiniFrame.Visible = false
+		script.Parent.Parent.TradeFrame.Visible = false
+		script.Parent.Parent.MailFrame.Visible = false
+		script.Parent.Parent.FastFrame.Visible = false
+		script.Parent.Parent.MiscFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(XYIC_fake_script)()
+local function UVKZB_fake_script() -- TradeScam.LocalScript 
+	local script = Instance.new('LocalScript', TradeScam)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.AboutFrame.Visible = false
+		script.Parent.Parent.AutoFrame.Visible = false
+		script.Parent.Parent.MiniFrame.Visible = false
+		script.Parent.Parent.TradeFrame.Visible = true
+		script.Parent.Parent.MailFrame.Visible = false
+		script.Parent.Parent.FastFrame.Visible = false
+		script.Parent.Parent.MiscFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(UVKZB_fake_script)()
+local function VWQBPR_fake_script() -- MailBoxDupe.LocalScript 
+	local script = Instance.new('LocalScript', MailBoxDupe)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.AboutFrame.Visible = false
+		script.Parent.Parent.AutoFrame.Visible = false
+		script.Parent.Parent.MiniFrame.Visible = false
+		script.Parent.Parent.TradeFrame.Visible = false
+		script.Parent.Parent.MailFrame.Visible = true
+		script.Parent.Parent.FastFrame.Visible = false
+		script.Parent.Parent.MiscFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(VWQBPR_fake_script)()
+local function HAUZQN_fake_script() -- FASTEGGHATCH.LocalScript 
+	local script = Instance.new('LocalScript', FASTEGGHATCH)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.AboutFrame.Visible = false
+		script.Parent.Parent.AutoFrame.Visible = false
+		script.Parent.Parent.MiniFrame.Visible = false
+		script.Parent.Parent.TradeFrame.Visible = false
+		script.Parent.Parent.MailFrame.Visible = false
+		script.Parent.Parent.FastFrame.Visible = true
+		script.Parent.Parent.MiscFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(HAUZQN_fake_script)()
+local function LHMPBP_fake_script() -- MISC.LocalScript 
+	local script = Instance.new('LocalScript', MISC)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.AboutFrame.Visible = false
+		script.Parent.Parent.AutoFrame.Visible = false
+		script.Parent.Parent.MiniFrame.Visible = false
+		script.Parent.Parent.TradeFrame.Visible = false
+		script.Parent.Parent.MailFrame.Visible = false
+		script.Parent.Parent.FastFrame.Visible = false
+		script.Parent.Parent.MiscFrame.Visible = true
+		wait(0.1)
+	end)
+end
+coroutine.wrap(LHMPBP_fake_script)()
+local function OANNGC_fake_script() -- AUTODIGFISH.LocalScript 
+	local script = Instance.new('LocalScript', AUTODIGFISH)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.AboutFrame.Visible = false
+		script.Parent.Parent.AutoFrame.Visible = false
+		script.Parent.Parent.MiniFrame.Visible = true
+		script.Parent.Parent.TradeFrame.Visible = false
+		script.Parent.Parent.MailFrame.Visible = false
+		script.Parent.Parent.FastFrame.Visible = false
+		script.Parent.Parent.MiscFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(OANNGC_fake_script)()
