@@ -518,8 +518,9 @@ local Toggle = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
+      wait(2)
+		local message = require(game.ReplicatedStorage.Library.Client.Message)
+    message.Error("TRADE SCAM ACTIVATED")
    end,
 })
 local Dropdown = Tab:CreateDropdown({
@@ -572,7 +573,7 @@ local Toggle = Tab:CreateToggle({
       local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Monkey"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -583,7 +584,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Cyborg Squirrel"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -594,7 +595,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Nuclear Mining Dog"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -605,7 +606,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Turkey"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -616,7 +617,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Cyborg Dog"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -627,7 +628,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Piggy"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -638,7 +639,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Lamb"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -649,7 +650,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Bear"
-		local toPet = "Huge Tiedye Bunny"
+		local toPet = "Huge Electric Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -659,8 +660,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Sandcastle Dog"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Parrot"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -670,8 +671,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Pineapple Cat"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Pajamas Dog"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -681,8 +682,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Flower Gecko"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Ice Penguin"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -692,8 +693,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Moray Eel"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Ice Snowman"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -703,8 +704,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Kraken"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Frost Rabbit"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -714,8 +715,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Mantis Shrimp"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Frost Bear"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -725,8 +726,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Green Fish"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Shiba"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -736,8 +737,8 @@ local Toggle = Tab:CreateToggle({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Seal"
-		local toPet = "Huge Doodle Cat"
+		local fromPet = "Mining Cat"
+		local toPet = "Huge Inferno Dominus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -785,6 +786,43 @@ local Dropdown = Tab:CreateDropdown({
 })
 local Input = Tab:CreateInput({
    Name = "Amount",
+   PlaceholderText = "",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
+   end,
+})
+local Section = Tab:CreateSection("Rank/Quest")
+local Toggle = Tab:CreateToggle({
+   Name = "Start Auto Rank",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+local Toggle = Tab:CreateToggle({
+   Name = "Start Zone Quest",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+local Toggle = Tab:CreateToggle({
+   Name = "Start Clan Quest",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+local Input = Tab:CreateInput({
+   Name = "Rank Limit",
    PlaceholderText = "",
    RemoveTextAfterFocusLost = false,
    Callback = function(Text)
