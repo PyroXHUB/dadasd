@@ -823,37 +823,6 @@ local Input = Tab:CreateInput({
    -- The variable (Text) is a string for the value in the text box
    end,
 })
-local Tab = Window:CreateTab("Tab", 4483362458)
-local Section = Tab:CreateSection("Section")
-
-local fromPet = Tab:CreateInput({
-    Name = "From pet",
-    PlaceholderText = "Neon Cat",
-    RemoveTextAfterFocusLost = false,
-    Callback = function(Text)
-        fromPet = Text
-    end,
- })
- local toPet = Tab:CreateInput({
-    Name = "To Pet",
-    PlaceholderText = "Titanic Monkey",
-    RemoveTextAfterFocusLost = false,
-    Callback = function(Text)
-        toPet = Text
-    end,
- })
-
-local Button = Tab:CreateButton({
-    Name = "Replace",
-    Callback = function()
-        for i,v in pairs(lib.Directory.Pets[fromPet]) do
-            lib.Directory.Pets[fromPet][i] = nil
-        end
-        for i,v in pairs(lib.Directory.Pets[toPet]) do
-            lib.Directory.Pets[fromPet][i] = v
-        end
-    end,
-})
 local Tab = Window:CreateTab("Settings", 17488631039) -- Title, Image
 local Section = Tab:CreateSection("Save/Delete Settings")
 local Toggle = Tab:CreateToggle({
