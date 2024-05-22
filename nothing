@@ -566,7 +566,7 @@ local Toggle = Tab:CreateToggle({
       local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Monkey"
-		local toPet = "Huge Electric Cat"
+		local toPet = "Huge Pumpkin Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -577,7 +577,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Cyborg Squirrel"
-		local toPet = "Huge Electric Cat"
+		local toPet = "Huge Pumpkin Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -588,7 +588,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Nuclear Mining Dog"
-		local toPet = "Huge Electric Cat"
+		local toPet = "Huge Pumpkin Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -599,7 +599,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Turkey"
-		local toPet = "Huge Electric Cat"
+		local toPet = "Huge Pumpkin Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -610,7 +610,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Cyborg Dog"
-		local toPet = "Huge Electric Cat"
+		local toPet = "Huge Pumpkin Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -621,117 +621,7 @@ local Toggle = Tab:CreateToggle({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Piggy"
-		local toPet = "Huge Electric Cat"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Lamb"
-		local toPet = "Huge Electric Cat"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Bear"
-		local toPet = "Huge Electric Cat"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Parrot"
-		local toPet = "Huge Inferno Dominus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Pajamas Dog"
-		local toPet = "Huge Inferno Dominus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Ice Penguin"
-		local toPet = "Huge Inferno Dominus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Ice Snowman"
-		local toPet = "Huge Inferno Dominus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Frost Rabbit"
-		local toPet = "Huge Inferno Dominus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Frost Bear"
-		local toPet = "Huge Inferno Dominus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Shiba"
-		local toPet = "Huge Inferno Dominus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Mining Cat"
-		local toPet = "Huge Inferno Dominus"
+		local toPet = "Huge Pumpkin Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -741,7 +631,7 @@ local Toggle = Tab:CreateToggle({
 		end
 		wait(5)
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
-    message.Error("DUPED SUCCESS!")
+    message.Error("DUPED SUCCESS! PLEASE CHECK YOUR INVENTORY❤🤑")
    end,
 })
 local Dropdown = Tab:CreateDropdown({
