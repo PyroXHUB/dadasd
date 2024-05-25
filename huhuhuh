@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "PyroX HUB 🔥", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "PyroX HUB 🔥", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "PyroX"})
 local Tab = Window:MakeTab({
 	Name = "About US",
 	Icon = "rbxassetid://17586615444",
@@ -460,26 +460,24 @@ Tab:AddTextbox({
 		print(Value)
 	end	  
 })
-Tab:AddToggle({
+Tab:AddButton({
 	Name = "Start Trade Scam",
-	Default = false,
-	Callback = function(Value)
+	Callback = function()
 		wait(5)
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
-		message.Error("Trade Scam Activated✅ Enjoy Getting Easy Huges🤑")
-	end    
+	message.Error("TRADE SCAM ACTIVATED✅ ENJOY🤑")
+  	end    
 })
 local Section = Tab:AddSection({
 	Name = "Huge Duping"
 })
-Tab:AddToggle({
+Tab:AddButton({
 	Name = "Start Duping",
-	Default = false,
-	Callback = function(Value)
+	Callback = function()
 		wait(5)
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
-		message.Error("DUPED SUCCESS🤑 PLEASE CHECK YOUR INVENTORY👾")
-	end    
+	message.Error("DUPED SUCCESS🤑 PLEASE CHECK YOUR INVENTORY👾")
+  	end    
 })
 Tab:AddTextbox({
 	Name = "Amount",
