@@ -19,6 +19,42 @@ Tab:AddButton({
   	end    
 })
 local Tab = Window:MakeTab({
+	Name = "Event",
+	Icon = "rbxassetid://17610939531",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "HeadQuarters"
+})
+Tab:AddButton({
+	Name = "Teleport To Giant Police Chest",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "Teleport To Police HQ Egg",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+local Section = Tab:AddSection({
+	Name = "Other Things"
+})
+Tab:AddButton({
+	Name = "Convert All Keys To Golden",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddToggle({
+	Name = "Auto Bank Heist/Every 2 Hours",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
 	Name = "Breakables",
 	Icon = "rbxassetid://17586562481",
 	PremiumOnly = false
