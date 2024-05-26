@@ -510,6 +510,39 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Start Duping",
 	Callback = function()
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Monkey"
+		local toPet = "Huge Colorful Slime"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Parrot"
+		local toPet = "Huge Cupcake"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Bear"
+		local toPet = "Huge Wizard Westie"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
 		wait(5)
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
 	message.Error("DUPED SUCCESS🤑 PLEASE CHECK YOUR INVENTORY👾")
