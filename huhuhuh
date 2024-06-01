@@ -19,36 +19,44 @@ Tab:AddButton({
   	end    
 })
 local Tab = Window:MakeTab({
-	Name = "Event",
-	Icon = "rbxassetid://17610939531",
+	Name = "Summer Event",
+	Icon = "rbxassetid://17696485524",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "HeadQuarters"
+	Name = "Summer Event"
 })
 Tab:AddButton({
-	Name = "Teleport To Giant Police Chest",
+	Name = "Start Egg Hunt",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddDropdown({
+	Name = "Egg Chances",
+	Default = "75x",
+	Options = {"75x", "100x"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddButton({
+	Name = "Complete Summer Obby",
 	Callback = function()
       		print("button pressed")
   	end    
 })
 Tab:AddButton({
-	Name = "Teleport To Police HQ Egg",
+	Name = "Auto Jungle Boss Fight (every 4hours)",
 	Callback = function()
       		print("button pressed")
   	end    
 })
 local Section = Tab:AddSection({
-	Name = "Other Things"
-})
-Tab:AddButton({
-	Name = "Convert All Keys To Golden",
-	Callback = function()
-      		print("button pressed")
-  	end    
+	Name = "Seashell Machine"
 })
 Tab:AddToggle({
-	Name = "Auto Bank Heist/Every 2 Hours",
+	Name = "Auto Convert Seashell",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
