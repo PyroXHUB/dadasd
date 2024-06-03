@@ -571,7 +571,7 @@ local Section = Tab:AddSection({
 	Name = "Exclusive Egg"
 })
 Tab:AddButton({
-	Name = "Start Titanic Hunting",
+	Name = "Start Huge/Titanic Hunting",
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
@@ -653,7 +653,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Tiedye Dog"
-		local toPet = "Huge Tiedye Axolotl"
+		local toPet = "Huge Tiedye Bunny"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -664,7 +664,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Tiedye Bunny"
-		local toPet = "Huge Tiedye Axolotl"
+		local toPet = "Huge Tiedye Bunny"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -675,7 +675,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Tiedye Griffin"
-		local toPet = "Huge Tiedye Axolotl"
+		local toPet = "Huge Tiedye Bunny"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -686,7 +686,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Tiedye Axolotl"
-		local toPet = "Huge Tiedye Axolotl"
+		local toPet = "Huge Tiedye Bunny"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
