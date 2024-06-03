@@ -575,8 +575,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Stargazing Wolf"
-		local toPet = "Titanic Stargazing Bull"
+		local fromPet = "Jester Dog"
+		local toPet = "Titanic Bat Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -586,8 +586,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Stargazing Bear"
-		local toPet = "Titanic Stargazing Bull"
+		local fromPet = "Thunder Bear"
+		local toPet = "Titanic Bat Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -597,8 +597,96 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Stargazing Axolotl"
-		local toPet = "Titanic Stargazing Bull"
+		local fromPet = "Super Tiger"
+		local toPet = "Titanic Bat Cat"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Dog"
+		local toPet = "Huge Tiedye Bunny"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Bunny"
+		local toPet = "Huge Tiedye Bunny"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Griffin"
+		local toPet = "Huge Tiedye Bunny"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Axolotl"
+		local toPet = "Huge Tiedye Bunny"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Dog"
+		local toPet = "Huge Tiedye Axolotl"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Bunny"
+		local toPet = "Huge Tiedye Axolotl"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Griffin"
+		local toPet = "Huge Tiedye Axolotl"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Tiedye Axolotl"
+		local toPet = "Huge Tiedye Axolotl"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -608,54 +696,15 @@ Tab:AddButton({
 		end
 		wait(5)
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
-	message.Error("TITANIC HUNTING ACTIVATED✅")
+	message.Error("TITANIC/HUGE HUNTING ACTIVATED✅")
   	end    
 })
-Tab:AddButton({
-	Name = "Start Huge Hunting",
-	Callback = function()
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Bejeweled Unicorn"
-		local toPet = "Huge Bejeweled Lion"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Bejeweled Deer"
-		local toPet = "Huge Bejeweled Lion"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local fromPet = "Bejeweled Lion"
-		local toPet = "Huge Bejeweled Lion"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		wait(5)
-		local message = require(game.ReplicatedStorage.Library.Client.Message)
-	message.Error("HUGE HUNTING ACTIVATED✅")
-  	end    
-})
-Tab:AddTextbox({
-	Name = "Exclusive Eggs",
-	Default = "EGG NAME",
-	TextDisappear = false,
+Tab:AddDropdown({
+	Name = "EGG/DLC GIFTS",
+	Default = "Exclusive Egg",
+	Options = {"Exclusive Egg", "DLC GIFTS"},
 	Callback = function(Value)
 		print(Value)
-	end	  
+	end    
 })
 OrionLib:Init()
