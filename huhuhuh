@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "PyroX HUB 🔥", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "PyroX"})
+local Window = OrionLib:MakeWindow({Name = "PyroX HUB 🔥", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "PyroX", Icon = "rbxassetid://17739636946"})
 local Tab = Window:MakeTab({
 	Name = "About US",
 	Icon = "rbxassetid://17586615444",
