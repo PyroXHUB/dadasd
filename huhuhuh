@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "PyroX HUB 🔥", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "PyroX", Icon = "rbxassetid://17739636946"})
+local Window = OrionLib:MakeWindow({Name = "PyroX HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "PyroX", IconEnabled = true, Icon = "rbxassetid://17739636946"})
 local Tab = Window:MakeTab({
 	Name = "About US",
 	Icon = "rbxassetid://17586615444",
@@ -716,6 +716,52 @@ Tab:AddDropdown({
 	Name = "EGG/DLC GIFTS",
 	Default = "Exclusive Egg",
 	Options = {"Exclusive Egg", "DLC GIFTS"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Huge To Titanic",
+	Icon = "rbxassetid://17743706150",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Huge To Titanic"
+})
+Tab:AddParagraph("Quick Tutorial","Put In The Blank Box What's The Name Of Titanic Your Huge To TUrn INTO")
+Tab:AddButton({
+	Name = "Turn Titanic!",
+	Callback = function()
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Huge Festive Cat"
+		local toPet = "Titanic Bat Cat"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local message = require(game.ReplicatedStorage.Library.Client.Message)
+	message.Error("PLEASE WAIT A FEW SECONDS WHILE WE TRICKING THE SYSTEM TO TURN YOUR HUGE TO TITANIC💕")
+		wait(5)
+		local message = require(game.ReplicatedStorage.Library.Client.Message)
+	message.Error("WE SUCCESSFULLY TURN YOUR HUGE TO TITANIC✅ ENJOY🤑")
+  	end    
+})
+Tab:AddTextbox({
+	Name = "Name Of Titanic",
+	Default = "Name",
+	TextDisappear = false,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+Tab:AddDropdown({
+	Name = "Rarity",
+	Default = "Normal",
+	Options = {"Normal", "Golden", "Rainbow"},
 	Callback = function(Value)
 		print(Value)
 	end    
