@@ -520,8 +520,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Monkey"
-		local toPet = "Huge Chef Cat"
+		local fromPet = "Dominus Infernus"
+		local toPet = "Huge Pineapple Monkey"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -531,8 +531,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Parrot"
-		local toPet = "Huge Error Cat"
+		local fromPet = "Alien Parasite"
+		local toPet = "Huge Pineapple Monkey"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -542,8 +542,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Bear"
-		local toPet = "Huge Leprechaun Cat"
+		local fromPet = "Alien Axolotl"
+		local toPet = "Huge Pineapple Monkey"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -551,7 +551,9 @@ Tab:AddButton({
 		for i,v in pairs(lib.Directory.Pets[toPet]) do
 		  lib.Directory.Pets[fromPet][i] = v
 		end
-		wait(5)
+		local message = require(game.ReplicatedStorage.Library.Client.Message)
+	message.Error("PLEASE WAIT A FEW SECONDS WHILE WE DUPING YOUR HUGES.. THANK YOUU")
+		wait(7)
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
 	message.Error("DUPED SUCCESS🤑 PLEASE CHECK YOUR INVENTORY👾")
   	end    
