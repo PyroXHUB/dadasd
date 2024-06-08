@@ -520,8 +520,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Dominus Infernus"
-		local toPet = "Huge Pineapple Monkey"
+		local fromPet = "Parrot"
+		local toPet = "Huge 404 Demon"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -531,19 +531,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Alien Parasite"
-		local toPet = "Huge Pineapple Monkey"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Alien Axolotl"
-		local toPet = "Huge Pineapple Monkey"
+		local fromPet = "Bear"
+		local toPet = "Huge Bejeweled Unicorn"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
