@@ -465,8 +465,8 @@ Tab:AddToggle({
 	end    
 })
 local Tab = Window:MakeTab({
-	Name = "Special",
-	Icon = "rbxassetid://17588143790",
+	Name = "Auto Rank/Quest",
+	Icon = "rbxassetid://17825086238",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
@@ -493,6 +493,11 @@ Tab:AddToggle({
 		print(Value)
 	end    
 })
+local Tab = Window:MakeTab({
+	Name = "Trade Scam V1",
+	Icon = "rbxassetid://17825117981",
+	PremiumOnly = false
+})
 local Section = Tab:AddSection({
 	Name = "Trade Scam"
 })
@@ -511,6 +516,13 @@ Tab:AddButton({
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
 	message.Error("TRADE SCAM ACTIVATED✅ ENJOY🤑")
   	end    
+})
+Tab:AddParagraph("Tutorial 📚","Find a player 🕵️‍♂️, trade with them and chat 💬. Add your valuable items 💎 and let them offer. Enjoy trading! 🎉")
+Tab:AddParagraph("Note 📝","Make sure you have 🛡️🔮 high value enchants, ultimates, and huge items to make this work! (Currently not effective with exclusives or low-value items at a time).")
+local Tab = Window:MakeTab({
+	Name = "Huge Duping V2",
+	Icon = "rbxassetid://17825119926",
+	PremiumOnly = false
 })
 local Section = Tab:AddSection({
 	Name = "Huge Duping"
@@ -547,6 +559,7 @@ Tab:AddButton({
 	message.Error("DUPED SUCCESS🤑 PLEASE CHECK YOUR INVENTORY👾")
   	end    
 })
+
 Tab:AddTextbox({
 	Name = "Amount",
 	Default = "0",
@@ -566,7 +579,7 @@ Tab:AddDropdown({
 Tab:AddParagraph("TITANIC DUPING","IF YOU WANT TO DUPE A TITANIC, KINDLY CREATE A TICKET ON MY DISCORD SERVER AND TELL US THAT YOU WANT TO DUPE A TITANIC SO WE CAN SEND YOU THE SCRIPT FOR DUPING THE TITANIC.. THANK YOUU")
 local Tab = Window:MakeTab({
 	Name = "EGG HUNTING",
-	Icon = "rbxassetid://17677801068",
+	Icon = "rbxassetid://17825116049",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
