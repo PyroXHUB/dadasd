@@ -642,14 +642,14 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Huge To Titanic"
 })
-Tab:AddParagraph("Quick Tutorial","Put In The Blank Box What's The Name Of Titanic Your Huge To TUrn INTO")
+Tab:AddParagraph("Quick Tutorial⚡📚","Enter the name of the Titanic Pet in the blank box to transform it! 🚢✨")
 Tab:AddButton({
 	Name = "Turn Titanic!",
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Huge Festive Cat"
-		local toPet = "Titanic Bat Cat"
+		local fromPet = "Huge Party Dragon"
+		local toPet = "Titanic Blazing Dragon"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
