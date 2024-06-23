@@ -19,15 +19,15 @@ Tab:AddButton({
   	end    
 })
 local Tab = Window:MakeTab({
-	Name = "Summer Event",
-	Icon = "rbxassetid://17696485524",
+	Name = "Virus Event",
+	Icon = "rbxassetid://18129189088",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Summer Event"
+	Name = "Virus Event"
 })
 Tab:AddButton({
-	Name = "Start Egg Hunt",
+	Name = "Start Server Hopping",
 	Callback = function()
       		print("button pressed")
   	end    
@@ -40,23 +40,11 @@ Tab:AddDropdown({
 		print(Value)
 	end    
 })
-Tab:AddButton({
-	Name = "Complete Summer Obby",
-	Callback = function()
-      		print("button pressed")
-  	end    
-})
-Tab:AddButton({
-	Name = "Auto Jungle Boss Fight (every 4hours)",
-	Callback = function()
-      		print("button pressed")
-  	end    
-})
 local Section = Tab:AddSection({
-	Name = "Seashell Machine"
+	Name = "Virus Chest"
 })
 Tab:AddToggle({
-	Name = "Auto Convert Seashell",
+	Name = "Auto Virus Chest (When Spawned",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
@@ -601,8 +589,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Shark"
-		local toPet = "Huge Blazing Bat"
+		local fromPet = "Flex Fluffy Cat"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -612,8 +600,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Corgi"
-		local toPet = "Huge Blazing Bat"
+		local fromPet = "Flex Bear"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -623,8 +611,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Bat"
-		local toPet = "Huge Blazing Bat"
+		local fromPet = "Flex Tiger"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -635,7 +623,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Stargazing Wolf"
-		local toPet = "Huge Stargazing Axolotl"
+		local toPet = "Titanic Stargazing Bull"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -646,7 +634,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Stargazing Bear"
-		local toPet = "Huge Stargazing Axolotl"
+		local toPet = "Titanic Stargazing Bull"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -657,7 +645,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Stargazing Axolotl"
-		local toPet = "Huge Stargazing Axolotl"
+		local toPet = "Titanic Stargazing Bull"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
