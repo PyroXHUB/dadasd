@@ -19,32 +19,22 @@ Tab:AddButton({
   	end    
 })
 local Tab = Window:MakeTab({
-	Name = "Virus Event",
-	Icon = "rbxassetid://18129189088",
+	Name = "Good and Evil Event",
+	Icon = "rbxassetid://18170478495",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Virus Event"
+	Name = "Good and Evil Event"
 })
-Tab:AddButton({
-	Name = "Start Server Hopping",
-	Callback = function()
-      		print("button pressed")
-  	end    
-})
-Tab:AddDropdown({
-	Name = "Egg Chances",
-	Default = "75x",
-	Options = {"75x", "100x"},
+Tab:AddToggle({
+	Name = "Auto Good vs Evil Contest",
+	Default = false,
 	Callback = function(Value)
 		print(Value)
 	end    
 })
-local Section = Tab:AddSection({
-	Name = "Virus Chest"
-})
 Tab:AddToggle({
-	Name = "Auto Virus Chest (When Spawned",
+	Name = "Huge Hatching Contest, Hatching Contest",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
