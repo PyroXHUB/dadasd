@@ -645,8 +645,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Stargazing Wolf"
-		local toPet = "Titanic Stargazing Bull"
+		local fromPet = "Black Hole Axolotl"
+		local toPet = "Titanic Black Hole Angelus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -656,8 +656,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Stargazing Bear"
-		local toPet = "Titanic Stargazing Bull"
+		local fromPet = "Black Hole Kitsune"
+		local toPet = "Titanic Black Hole Angelus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -667,8 +667,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Stargazing Axolotl"
-		local toPet = "Titanic Stargazing Bull"
+		local fromPet = "Black Hole Immortuus"
+		local toPet = "Titanic Black Hole Angelus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
