@@ -19,22 +19,29 @@ Tab:AddButton({
   	end    
 })
 local Tab = Window:MakeTab({
-	Name = "Good and Evil Event",
+	Name = "Angels vs Demons!",
 	Icon = "rbxassetid://18170478495",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Good and Evil Event"
+	Name = "Angels vs Demons Event"
 })
 Tab:AddToggle({
-	Name = "Auto Good vs Evil Contest",
+	Name = "Auto Farm",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
 	end    
 })
 Tab:AddToggle({
-	Name = "Huge Hatching Contest, Hatching Contest",
+	Name = "Auto Raid Minigame",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Farming Coins, Auto Hatching",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
