@@ -590,8 +590,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Flex Fluffy Cat"
-		local toPet = "Titanic Flex Cat"
+		local fromPet = "Blazing Shark"
+		local toPet = "Titanic Blazing Dragon"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -601,8 +601,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Flex Bear"
-		local toPet = "Titanic Flex Cat"
+		local fromPet = "Blazing Corgi"
+		local toPet = "Titanic Blazing Dragon"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -612,8 +612,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Flex Tiger"
-		local toPet = "Titanic Flex Cat"
+		local fromPet = "Blazing Bat"
+		local toPet = "Titanic Blazing Dragon"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -623,8 +623,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Black Hole Axolotl"
-		local toPet = "Titanic Black Hole Angelus"
+		local fromPet = "Stargazing Wolf"
+		local toPet = "Titanic Stargazing Bull"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -634,8 +634,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Black Hole Kitsune"
-		local toPet = "Titanic Black Hole Angelus"
+		local fromPet = "Stargazing Bear"
+		local toPet = "Titanic Stargazing Bull"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -645,8 +645,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Black Hole Immortuus"
-		local toPet = "Titanic Black Hole Angelus"
+		local fromPet = "Stargazing Axolotl"
+		local toPet = "Titanic Stargazing Bull"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
