@@ -597,8 +597,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Shark"
-		local toPet = "Titanic Blazing Dragon"
+		local fromPet = "Cosmic Axolotl"
+		local toPet = "Titanic Cosmic Pegasus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -608,8 +608,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Corgi"
-		local toPet = "Titanic Blazing Dragon"
+		local fromPet = "Cosmic Dragon"
+		local toPet = "Titanic Cosmic Pegasus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -619,8 +619,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Bat"
-		local toPet = "Titanic Blazing Dragon"
+		local fromPet = "Cosmic Agony"
+		local toPet = "Titanic Cosmic Pegasus"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -630,8 +630,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Cool Cat"
-		local toPet = "Huge Cool Cat"
+		local fromPet = "Flex Fluffy Cat"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -641,8 +641,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Cool Corgi"
-		local toPet = "Huge Cool Cat"
+		local fromPet = "Flex Bear"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -652,8 +652,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Cool Dragon"
-		local toPet = "Huge Cool Cat"
+		local fromPet = "Flex Tiget"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
