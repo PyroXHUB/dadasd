@@ -19,33 +19,53 @@ Tab:AddButton({
   	end    
 })
 local Tab = Window:MakeTab({
-	Name = "Angels vs Demons!",
-	Icon = "rbxassetid://18170478495",
+	Name = "Lucky Tiles",
+	Icon = "rbxassetid://18387938008",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Angels vs Demons Event"
+	Name = "Lucky Tiles🍀"
 })
 Tab:AddToggle({
-	Name = "Auto Farm",
+	Name = "Auto Choose Tiles",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
 	end    
 })
+Tab:AddDropdown({
+	Name = "Target Tiles",
+	Default = "Rarity Huge",
+	Options = {"Normal Huge UV Kitsune", "Golden Huge UV Kitsune", "Rainbow Huge UV Kitsune", "Shiny Normal Huge UV Kitsune", "Shiny Golden Huge UV Kitsune", "Shiny Rainbow Huge UV Kitsune"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Webhook Notifications"
+})
 Tab:AddToggle({
-	Name = "Auto Raid Minigame",
+	Name = "Start Webhook",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
 	end    
 })
-Tab:AddToggle({
-	Name = "Farming Coins, Auto Hatching",
-	Default = false,
+Tab:AddDropdown({
+	Name = "Notification Webhook IF GOT",
+	Default = "Normal Huge UV Kitsune",
+	Options = {"Normal Huge UV Kitsune", "Golden Huge UV Kitsune", "Rainbow Huge UV Kitsune", "Shiny Normal Huge UV Kitsune", "Shiny Golden Huge UV Kitsune", "Shiny Rainbow Huge UV Kitsune"},
 	Callback = function(Value)
 		print(Value)
 	end    
+})
+Tab:AddTextbox({
+	Name = "Webhook Here",
+	Default = "Webhook",
+	TextDisappear = false,
+	Callback = function(Value)
+		print(Value)
+	end	  
 })
 local Tab = Window:MakeTab({
 	Name = "Breakables",
@@ -518,7 +538,7 @@ Tab:AddButton({
 		local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Parrot"
-		local toPet = "Huge Good vs Evil Cat"
+		local toPet = "Huge BIG Maskot"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -528,8 +548,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Bear"
-		local toPet = "Huge Leprechaun Cat"
+		local fromPet = "Green Fish"
+		local toPet = "Huge Devil Agony"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -539,19 +559,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Turkey"
-		local toPet = "Huge Good vs Evil Cat"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Pig"
-		local toPet = "Huge Leprechaun Cat"
+		local fromPet = "Seal"
+		local toPet = "Huge UV Kitsune"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
