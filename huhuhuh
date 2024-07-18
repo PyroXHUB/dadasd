@@ -595,8 +595,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Valkyrie Dog"
-		local toPet = "Titanic Valkyrie Pegasus"
+		local fromPet = "Flex Bear"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -606,8 +606,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Valkyrie Dragon"
-		local toPet = "Titanic Valkyrie Pegasus"
+		local fromPet = "Flex Tiger"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -617,8 +617,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Valkyrie Wolf"
-		local toPet = "Titanic Valkyrie Pegasus"
+		local fromPet = "Flex Fluffy Cat"
+		local toPet = "Titanic Flex Cat"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -628,8 +628,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Shark"
-		local toPet = "Titanic Blazing Dragon"
+		local fromPet = "Emoji Dog"
+		local toPet = "Titanic Emoji Corgi"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -639,8 +639,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Corgi"
-		local toPet = "Titanic Blazing Dragon"
+		local fromPet = "Emoji Monkey"
+		local toPet = "Titanic Emoji Corgi"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -650,8 +650,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Blazing Bat"
-		local toPet = "Titanic Blazing Dragon"
+		local fromPet = "Emoji Cat"
+		local toPet = "Titanic Emoji Corgi"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
