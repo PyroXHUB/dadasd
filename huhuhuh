@@ -533,23 +533,12 @@ local Section = Tab:AddSection({
 	Name = "Huge Duping"
 })
 Tab:AddButton({
-	Name = "Start Duping",
+	Name = "ACTIVATE DUPING✅",
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Parrot"
-		local toPet = "Huge Rich Cat"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Demolition Cat"
-		local toPet = "Huge Lunar Moth"
+		local fromPet = "Nuclear Mining Cat"
+		local toPet = "Huge Wizard Westie"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -561,17 +550,18 @@ Tab:AddButton({
 	message.Error("PLEASE WAIT A FEW SECONDS WHILE WE DUPING YOUR HUGES.. THANK YOUU")
 		wait(7)
 		local message = require(game.ReplicatedStorage.Library.Client.Message)
-	message.Error("DUPED SUCCESS🤑 PLEASE CHECK YOUR INVENTORY👾")
+	message.Error("You Can Now Click The Dupe More!🤑 Please Don't Abuse it!👾")
   	end    
 })
-
-Tab:AddTextbox({
-	Name = "Amount",
-	Default = "0",
-	TextDisappear = false,
-	Callback = function(Value)
-		print(Value)
-	end	  
+Tab:AddButton({
+	Name = "Dupe More🤑",
+	Callback = function()
+		local args = {
+			[1] = "77a84a8e43b949babd6d47eeeafe395b"
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))		
+  	end    
 })
 Tab:AddDropdown({
 	Name = "Rarity",
