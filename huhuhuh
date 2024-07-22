@@ -19,24 +19,36 @@ Tab:AddButton({
   	end    
 })
 local Tab = Window:MakeTab({
-	Name = "Lucky Tiles",
+	Name = "Event",
 	Icon = "rbxassetid://18387938008",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Lucky Tiles🍀"
+	Name = "Huge Raffle🎁"
 })
 Tab:AddToggle({
-	Name = "Auto Choose Tiles",
+	Name = "Auto Join Raffle🎁 (Every 10mins)",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
 	end    
 })
-Tab:AddDropdown({
-	Name = "Target Tiles",
-	Default = "Rarity Huge",
-	Options = {"Normal Huge UV Kitsune", "Golden Huge UV Kitsune", "Rainbow Huge UV Kitsune", "Shiny Normal Huge UV Kitsune", "Shiny Golden Huge UV Kitsune", "Shiny Rainbow Huge UV Kitsune"},
+local Section = Tab:AddSection({
+	Name = "Millionaire Ticket🎫"
+})
+Tab:AddToggle({
+	Name = "Auto Buy Tickets (Rich Guy Preston Tickets)",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Millionaire Run Minigame🏃️"
+})
+Tab:AddToggle({
+	Name = "Auto Minigame🏃️ (100% Predicts whats the right answer)",
+	Default = false,
 	Callback = function(Value)
 		print(Value)
 	end    
@@ -585,8 +597,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Sketch Corgi"
-		local toPet = "Titanic Sketch Cat"
+		local fromPet = "Bejeweled Unicorn"
+		local toPet = "Titanic Bejeweled Griffin"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -596,8 +608,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Sketch Cow"
-		local toPet = "Titanic Sketch Cat"
+		local fromPet = "Bejeweled Deer"
+		local toPet = "Titanic Bejeweled Griffin"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -607,41 +619,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Sketch Dragon"
-		local toPet = "Titanic Sketch Cat"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Valkyrie Dog"
-		local toPet = "Titanic Valkyrie Pegasus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Valkyrie Dragon"
-		local toPet = "Titanic Valkyrie Pegasus"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Valkyrie Wolf"
-		local toPet = "Titanic Valkyrie Pegasus"
+		local fromPet = "Bejeweled Lion"
+		local toPet = "Titanic Bejeweled Griffin"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
