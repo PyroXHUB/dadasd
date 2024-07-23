@@ -549,8 +549,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Nuclear Mining Cat"
-		local toPet = "Huge Wizard Westie"
+		local fromPet = "Ninja Turtle"
+		local toPet = "Huge Rave Meebo in a Spaceship"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -569,7 +569,7 @@ Tab:AddButton({
 	Name = "Dupe More🤑",
 	Callback = function()
 		local args = {
-			[1] = "77a84a8e43b949babd6d47eeeafe395b"
+			[1] = "8b3cefe0434e435facce0c00d74abadc"
 		}
 		
 		game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))		
