@@ -597,8 +597,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Bejeweled Unicorn"
-		local toPet = "Titanic Bejeweled Griffin"
+		local fromPet = "Valkyrie Dog"
+		local toPet = "Huge Valkyrie Dog"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -608,8 +608,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Bejeweled Deer"
-		local toPet = "Titanic Bejeweled Griffin"
+		local fromPet = "Valkyrie Dragon"
+		local toPet = "Huge Valkyrie Dog"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -619,8 +619,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Bejeweled Lion"
-		local toPet = "Titanic Bejeweled Griffin"
+		local fromPet = "Valkyrie Wolf"
+		local toPet = "Huge Valkyrie Dog"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
