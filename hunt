@@ -253,7 +253,43 @@ end
 
 -- Function to start duping (Placeholder for actual functionality)
 local function startDupingFunction()
-    -- Your custom duping function logic here
+    local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Mr. Krabs"
+		local toPet = "Titanic SpongeBob SquarePants"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Gary the Snail"
+		local toPet = "Titanic SpongeBob SquarePants"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Patrick Star"
+		local toPet = "Titanic SpongeBob SquarePants"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		wait(5)
+		local message = require(game.ReplicatedStorage.Library.Client.Message)
+	message.Error("TITANIC/HUGE HUNTING ACTIVATED✅")
+  	end    
 end
 
 -- Function to start duping when button is clicked
