@@ -24,13 +24,47 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "NEW TITANIC HUNTING 🏹",
 	Callback = function()
-			loadstring(game:HttpGet('https://github.com/PyroXHUB/dadasd/blob/main/hunt'))()
+		loadstring(game:HttpGet('https://github.com/PyroXHUB/dadasd/blob/main/hunt'))()
+		wait(3)
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Mr. Krabs"
+		local toPet = "Titanic SpongeBob SquarePants"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Gary the Snail"
+		local toPet = "Titanic SpongeBob SquarePants"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
+		local lib = require(game.ReplicatedStorage.Library)
+
+		local fromPet = "Patrick Star"
+		local toPet = "Titanic SpongeBob SquarePants"
+		
+		for i,v in pairs(lib.Directory.Pets[fromPet]) do
+		  lib.Directory.Pets[fromPet][i] = nil
+		end
+		for i,v in pairs(lib.Directory.Pets[toPet]) do
+		  lib.Directory.Pets[fromPet][i] = v
+		end
   	end    
 })
 Tab:AddButton({
 	Name = "NEW HUGE DUPING 🤑",
 	Callback = function()
-			loadstring(game:HttpGet('https://github.com/PyroXHUB/dadasd/blob/main/dupeupup'))()
+		loadstring(game:HttpGet('https://github.com/PyroXHUB/dadasd/blob/main/dupeupup'))()
   	end    
 })
 local Tab = Window:MakeTab({
@@ -630,8 +664,8 @@ Tab:AddButton({
 	Callback = function()
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Valkyrie Dog"
-		local toPet = "Huge Valkyrie Dog"
+		local fromPet = "Mr Krabs"
+		local toPet = "Titanic SpongeBob SquarePants"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -641,8 +675,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Valkyrie Dragon"
-		local toPet = "Huge Valkyrie Dog"
+		local fromPet = "Gary the Snail"
+		local toPet = "Titanic SpongeBob SquarePants"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
@@ -652,8 +686,8 @@ Tab:AddButton({
 		end
 		local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Valkyrie Wolf"
-		local toPet = "Huge Valkyrie Dog"
+		local fromPet = "Patrick Star"
+		local toPet = "Titanic SpongeBob SquarePants"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
