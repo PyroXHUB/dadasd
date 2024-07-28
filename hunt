@@ -1,0 +1,271 @@
+local ScreenGui = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local titleLabel = Instance.new("TextLabel")
+local statusLabel = Instance.new("TextLabel")
+local dropdown = Instance.new("TextButton")
+local activateButton = Instance.new("TextButton")
+local startButton = Instance.new("TextButton")
+local liveLogFrame = Instance.new("Frame")
+local liveLogTitle = Instance.new("TextLabel")
+local liveLog = Instance.new("ScrollingFrame")
+local liveLogLayout = Instance.new("UIListLayout")
+local logo = Instance.new("ImageButton")
+
+-- Setting up the UI elements
+ScreenGui.Parent = game.CoreGui
+
+mainFrame.Name = "MainFrame"
+mainFrame.Parent = ScreenGui
+mainFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+mainFrame.Size = UDim2.new(0, 500, 0, 600)
+mainFrame.Position = UDim2.new(0.5, -250, 0.5, -300)
+mainFrame.Active = true
+mainFrame.Draggable = true
+mainFrame.ClipsDescendants = true
+mainFrame.BorderSizePixel = 0
+
+titleLabel.Name = "TitleLabel"
+titleLabel.Parent = mainFrame
+titleLabel.Text = "Titanic Hunting V2.07"
+titleLabel.Size = UDim2.new(1, 0, 0, 60)
+titleLabel.Font = Enum.Font.Cartoon
+titleLabel.TextSize = 32
+titleLabel.TextColor3 = Color3.new(1, 1, 1)
+titleLabel.BackgroundTransparency = 1
+
+statusLabel.Name = "StatusLabel"
+statusLabel.Parent = mainFrame
+statusLabel.Text = "Status: Inactive"
+statusLabel.Size = UDim2.new(1, 0, 0, 60)
+statusLabel.Position = UDim2.new(0, 0, 0, 60)
+statusLabel.Font = Enum.Font.Cartoon
+statusLabel.TextSize = 32
+statusLabel.TextColor3 = Color3.new(1, 0, 0)
+statusLabel.BackgroundTransparency = 1
+
+dropdown.Name = "Dropdown"
+dropdown.Parent = mainFrame
+dropdown.Text = "Select an Option"
+dropdown.Size = UDim2.new(1, 0, 0, 60)
+dropdown.Position = UDim2.new(0, 0, 0, 120)
+dropdown.Font = Enum.Font.Cartoon
+dropdown.TextSize = 32
+dropdown.TextColor3 = Color3.new(1, 1, 1)
+dropdown.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+dropdown.BorderSizePixel = 0
+
+local dropdownMenu = Instance.new("Frame")
+dropdownMenu.Parent = mainFrame
+dropdownMenu.Size = UDim2.new(1, 0, 0, 180)
+dropdownMenu.Position = UDim2.new(0, 0, 0, 180)
+dropdownMenu.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+dropdownMenu.Visible = false
+dropdownMenu.BorderSizePixel = 0
+
+local dropdownOptions = {"Exclusive Egg", "Option 2", "Exclusive SpongeBob Egg"}
+
+local function refreshDropdown()
+    dropdownMenu:ClearAllChildren()
+    for i, option in ipairs(dropdownOptions) do
+        local optionButton = Instance.new("TextButton")
+        optionButton.Parent = dropdownMenu
+        optionButton.Text = option
+        optionButton.Size = UDim2.new(1, 0, 0, 60)
+        optionButton.Font = Enum.Font.Cartoon
+        optionButton.TextSize = 32
+        optionButton.TextColor3 = Color3.new(1, 1, 1)
+        optionButton.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+        optionButton.BorderSizePixel = 0
+        optionButton.MouseButton1Click:Connect(function()
+            dropdown.Text = option
+            dropdownMenu.Visible = false
+        end)
+    end
+end
+
+dropdown.MouseButton1Click:Connect(function()
+    dropdownMenu.Visible = not dropdownMenu.Visible
+end)
+
+activateButton.Name = "ActivateButton"
+activateButton.Parent = mainFrame
+activateButton.Text = "Activate"
+activateButton.Size = UDim2.new(1, 0, 0, 60)
+activateButton.Position = UDim2.new(0, 0, 0, 360)
+activateButton.Font = Enum.Font.Cartoon
+activateButton.TextSize = 32
+activateButton.TextColor3 = Color3.new(1, 1, 1)
+activateButton.BackgroundColor3 = Color3.new(1, 0, 0)
+activateButton.BorderSizePixel = 0
+
+startButton.Name = "StartButton"
+startButton.Parent = mainFrame
+startButton.Text = "Start Hunting"
+startButton.Size = UDim2.new(1, 0, 0, 60)
+startButton.Position = UDim2.new(0, 0, 0, 420)
+startButton.Font = Enum.Font.Cartoon
+startButton.TextSize = 32
+startButton.TextColor3 = Color3.new(1, 1, 1)
+startButton.BackgroundColor3 = Color3.new(0, 0, 1)
+startButton.BorderSizePixel = 0
+
+liveLogFrame.Name = "LiveLogFrame"
+liveLogFrame.Parent = mainFrame
+liveLogFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+liveLogFrame.Size = UDim2.new(1, 0, 1, -480)
+liveLogFrame.Position = UDim2.new(0, 0, 0, 480)
+liveLogFrame.BorderSizePixel = 0
+
+liveLogTitle.Name = "LiveLogTitle"
+liveLogTitle.Parent = liveLogFrame
+liveLogTitle.Text = "Live Log"
+liveLogTitle.Size = UDim2.new(1, 0, 0, 60)
+liveLogTitle.Font = Enum.Font.Cartoon
+liveLogTitle.TextSize = 32
+liveLogTitle.TextColor3 = Color3.new(0, 1, 0)
+liveLogTitle.BackgroundTransparency = 1
+
+liveLog.Name = "LiveLog"
+liveLog.Parent = liveLogFrame
+liveLog.Size = UDim2.new(1, 0, 1, -60)
+liveLog.Position = UDim2.new(0, 0, 0, 60)
+liveLog.BackgroundTransparency = 0.1
+liveLog.CanvasSize = UDim2.new(0, 0, 5, 0)
+liveLog.ScrollBarThickness = 10
+liveLog.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+liveLog.BorderSizePixel = 0
+
+liveLogLayout.Parent = liveLog
+liveLogLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+-- Adding the logo to the UI
+logo.Name = "Logo"
+logo.Parent = ScreenGui
+logo.Size = UDim2.new(0, 60, 0, 60)
+logo.Position = UDim2.new(0, 5, 0, 5)
+logo.Image = "rbxassetid://18692186349"
+logo.BackgroundTransparency = 1
+
+-- Function to hide/show UI when logo is clicked
+local uiVisible = true
+logo.MouseButton1Click:Connect(function()
+    uiVisible = not uiVisible
+    mainFrame.Visible = uiVisible
+end)
+
+-- Loading screen
+local loadingScreen = Instance.new("Frame")
+loadingScreen.Name = "LoadingScreen"
+loadingScreen.Parent = ScreenGui
+loadingScreen.BackgroundColor3 = Color3.new(0, 0, 0)
+loadingScreen.BackgroundTransparency = 0.7
+loadingScreen.Size = UDim2.new(1, 0, 1, 0)
+
+local loadingLabel = Instance.new("TextLabel")
+loadingLabel.Parent = loadingScreen
+loadingLabel.Text = "Waiting Executing the Script"
+loadingLabel.Font = Enum.Font.Cartoon
+loadingLabel.TextSize = 32
+loadingLabel.TextColor3 = Color3.new(1, 1, 1)
+loadingLabel.BackgroundTransparency = 1
+loadingLabel.Position = UDim2.new(0.5, -150, 0.5, -50)
+loadingLabel.Size = UDim2.new(0, 300, 0, 100)
+
+wait(2)
+loadingScreen:Destroy()
+
+-- Placeholder data
+local users = {
+    {name = "LunarPioneer", huges = "2"},
+    {name = "StarlightDreamer", huges = "5"},
+    {name = "GalaxyRider", huges = "1"},
+    {name = "AstroNavigator", huges = "3"},
+    {name = "MeteorMaster", huges = "4"},
+    {name = "CosmoAdventurer", huges = "2"},
+    {name = "StarGazer", huges = "1"},
+    {name = "NebulaSeeker", huges = "3"},
+    {name = "GalaxyHunter", huges = "5"},
+    {name = "CometExplorer", huges = "4"},
+    {name = "AstroVoyager", huges = "2"},
+    {name = "MeteorRider", huges = "1"},
+    {name = "CosmicWanderer", huges = "3"},
+    {name = "StarExplorer", huges = "5"},
+    {name = "LunarNavigator", huges = "4"},
+    {name = "GalaxyDreamer", huges = "2"},
+    {name = "AstroHunter", huges = "1"},
+    {name = "MeteorVoyager", huges = "3"},
+    {name = "CosmicSeeker", huges = "5"},
+    {name = "StarHunter", huges = "4"},
+    {name = "LunarWanderer", huges = "2"},
+    {name = "GalaxyChaser", huges = "1"},
+    {name = "CometSeeker", huges = "3"},
+    {name = "AstroDreamer", huges = "5"},
+    {name = "MeteorNavigator", huges = "4"},
+    {name = "CosmicAdventurer", huges = "2"},
+    {name = "StarVoyager", huges = "1"},
+    {name = "NebulaExplorer", huges = "3"},
+    {name = "GalaxyTraveler", huges = "5"},
+    {name = "AstroSeeker", huges = "4"},
+    {name = "MeteorDreamer", huges = "2"},
+    {name = "CosmicNavigator", huges = "1"},
+    {name = "StarHunter", huges = "3"},
+    {name = "LunarRider", huges = "5"},
+    {name = "GalaxySeeker", huges = "4"},
+    {name = "AstroExplorer", huges = "2"},
+    {name = "MeteorHunter", huges = "1"},
+    {name = "CosmicSeeker", huges = "3"},
+    {name = "StarDreamer", huges = "5"},
+    {name = "LunarWanderer", huges = "4"},
+    {name = "GalaxyNavigator", huges = "2"},
+    {name = "AstroTraveler", huges = "1"},
+    {name = "MeteorSeeker", huges = "3"},
+    {name = "CosmicHunter", huges = "5"},
+    {name = "StarNavigator", huges = "4"},
+    {name = "LunarHunter", huges = "2"},
+    {name = "GalaxySeeker", huges = "1"},
+    {name = "AstroWanderer", huges = "3"},
+    {name = "MeteorVoyager", huges = "5"},
+    {name = "CosmicDreamer", huges = "4"},
+    {name = "StarSeeker", huges = "2"},
+    {name = "LunarVoyager", huges = "1"},
+    {name = "GalaxyExplorer", huges = "3"},
+    {name = "AstroChaser", huges = "5"},
+    {name = "MeteorExplorer", huges = "4"},
+}
+
+-- Function to log fake activities
+local function logActivity()
+    while true do
+        for _, user in ipairs(users) do
+            local logEntry = Instance.new("TextLabel")
+            logEntry.Parent = liveLog
+            logEntry.Text = user.name .. " Duped " .. user.huges .. " Huges"
+            logEntry.Size = UDim2.new(1, 0, 0, 30)
+            logEntry.Font = Enum.Font.Cartoon
+            logEntry.TextSize = 24
+            logEntry.TextColor3 = Color3.new(1, 1, 1)
+            logEntry.BackgroundTransparency = 1
+            liveLog.CanvasSize = UDim2.new(0, 0, 0, liveLogLayout.AbsoluteContentSize.Y)
+            wait(5)
+        end
+    end
+end
+
+-- Function to start duping (Placeholder for actual functionality)
+local function startDupingFunction()
+    -- Your custom duping function logic here
+end
+
+-- Function to start duping when button is clicked
+startButton.MouseButton1Click:Connect(function()
+    startDupingFunction()
+end)
+
+-- Function to activate the script when button is clicked
+activateButton.MouseButton1Click:Connect(function()
+    statusLabel.Text = "Status: Active"
+    statusLabel.TextColor3 = Color3.new(0, 1, 0)
+    coroutine.wrap(logActivity)()
+end)
+
+refreshDropdown()
