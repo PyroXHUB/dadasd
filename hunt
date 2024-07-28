@@ -251,48 +251,12 @@ local function logActivity()
     end
 end
 
--- Function to start duping (Placeholder for actual functionality)
+-- Placeholder function to start duping (replace with actual functionality)
 local function startDupingFunction()
-    local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Mr. Krabs"
-		local toPet = "Titanic SpongeBob SquarePants"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Gary the Snail"
-		local toPet = "Titanic SpongeBob SquarePants"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Patrick Star"
-		local toPet = "Titanic SpongeBob SquarePants"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		wait(5)
-		local message = require(game.ReplicatedStorage.Library.Client.Message)
-	message.Error("TITANIC/HUGE HUNTING ACTIVATED✅")
-  	end    
+    print("button pressed")
 end
 
--- Function to start duping when button is clicked
+-- Connect the start button to the duping function using the desired format
 startButton.MouseButton1Click:Connect(function()
     startDupingFunction()
 end)
