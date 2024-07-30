@@ -617,7 +617,11 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Dupe More🤑",
 	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/HUGEGamess/main/asda'))()
+		local args = {
+			[1] = "c6afa63813a9419095b01ffb2b559d85"
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))
   	end    
 })
 Tab:AddDropdown({
