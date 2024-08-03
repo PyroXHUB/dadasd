@@ -82,10 +82,10 @@ local function startDupingFunction()
 		
 		game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))
 		local args = {
-			[1] = "c6afa63813a9419095b01ffb2b559d85"
-		}
-		
-		game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))
+            [1] = "030b4cf1cea342e0b71bb3031d634cb3"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))        
 end
 
 startButton.MouseButton1Click:Connect(function()
