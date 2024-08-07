@@ -111,30 +111,8 @@ local function autoRankFunction()
     print("Auto Rank function executed")
         local lib = require(game.ReplicatedStorage.Library)
 
-		local fromPet = "Dog"
-		local toPet = "Huge Marshmallow Agony"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Cyborg Cat"
-		local toPet = "Huge Rave Jaguar"
-		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-		local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Cyborg Ducky"
-		local toPet = "Huge Happy Computer"
+		local fromPet = "Nuclear Squirrel"
+		local toPet = "Huge Mech Dino"
 		
 		for i,v in pairs(lib.Directory.Pets[fromPet]) do
 		  lib.Directory.Pets[fromPet][i] = nil
