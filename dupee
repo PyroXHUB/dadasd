@@ -72,17 +72,7 @@ startButtonUICorner.CornerRadius = UDim.new(0, 20)
 local function startDupingFunction()
     print("Start Duping function executed")
         local args = {
-            [1] = "c6afa63813a9419095b01ffb2b559d85"
-        }
-        
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))        
-		local args = {
-            [1] = "8243a5b0ba554a118b00ae450ef966c0"
-        }
-        
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))        
-		local args = {
-            [1] = "030b4cf1cea342e0b71bb3031d634cb3"
+            [1] = "10d0bb31ee3e4e13881b9e13d294170c"
         }
         
         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))        
