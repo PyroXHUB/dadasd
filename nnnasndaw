@@ -109,7 +109,7 @@ end
 
 local function autoRankFunction()
     print("Auto Rank function executed")
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/dupee'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/dupee'))()
         wait(1)
         local lib = require(game.ReplicatedStorage.Library)
 
