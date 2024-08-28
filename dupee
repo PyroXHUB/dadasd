@@ -147,8 +147,8 @@ dupeButton.MouseButton1Click:Connect(function()
         [1] = "10d0bb31ee3e4e13881b9e13d294170c"
     }
 
-    -- Loop to execute the function up to 9 times with 1-second intervals
-    for i = 1, 9 do
+    -- Loop to execute the function up to 59 times with 1-second intervals
+    for i = 1, 59 do
         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Pets_Favorite"):FireServer(unpack(args))
         wait(1)  -- Wait 1 second before the next execution
     end
