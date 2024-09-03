@@ -1,175 +1,183 @@
-local ScreenGui = Instance.new("ScreenGui")
+-- Create the ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create the main frame
 local mainFrame = Instance.new("Frame")
-local mainUICorner = Instance.new("UICorner")
+mainFrame.Size = UDim2.new(0, 320, 0, 160)
+mainFrame.Position = UDim2.new(0.5, -160, 0.5, -80)
+mainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+mainFrame.BackgroundTransparency = 0.15
+mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+mainFrame.Parent = screenGui
+
+-- Add rounded corners
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(0, 12)
+uiCorner.Parent = mainFrame
+
+-- Improved background with gradient
+local uiGradient = Instance.new("UIGradient")
+uiGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(60, 60, 60)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(30, 30, 30))
+})
+uiGradient.Rotation = 90
+uiGradient.Parent = mainFrame
+
+-- Add a shadow effect to the frame
+local shadow = Instance.new("ImageLabel")
+shadow.Size = UDim2.new(1, 20, 1, 20)
+shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+shadow.AnchorPoint = Vector2.new(0.5, 0.5)
+shadow.BackgroundTransparency = 1
+shadow.Image = "rbxassetid://1316045217"
+shadow.ImageTransparency = 0.5
+shadow.ScaleType = Enum.ScaleType.Slice
+shadow.SliceCenter = Rect.new(10, 10, 118, 118)
+shadow.Parent = mainFrame
+
+-- Make the main frame draggable
+local dragging = false
+local dragInput, dragStart, startPos
+
+mainFrame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainFrame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+mainFrame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if dragging and input == dragInput then
+        local delta = input.Position - dragStart
+        mainFrame.Position = UDim2.new(
+            startPos.X.Scale, startPos.X.Offset + delta.X,
+            startPos.Y.Scale, startPos.Y.Offset + delta.Y
+        )
+    end
+end)
+
+-- Add title label
 local titleLabel = Instance.new("TextLabel")
-local textBox = Instance.new("TextBox") -- Replaced dropdown with textBox
-local startButton = Instance.new("TextButton")
-local startButtonUICorner = Instance.new("UICorner")
-local liveLogFrame = Instance.new("Frame")
-local liveLogUICorner = Instance.new("UICorner")
-local liveLogTitle = Instance.new("TextLabel")
-local liveLog = Instance.new("ScrollingFrame")
-local liveLogLayout = Instance.new("UIListLayout")
-local logo = Instance.new("ImageButton")
-
--- Adding the ScreenGui to CoreGui
-ScreenGui.Parent = game.CoreGui
-
--- Main frame settings
-mainFrame.Name = "MainFrame"
-mainFrame.Parent = ScreenGui
-mainFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
-mainFrame.Size = UDim2.new(0, 300, 0, 400) -- Smaller size for mobile
-mainFrame.Position = UDim2.new(0.5, -150, 0.5, -200) -- Centered
-mainFrame.Active = true
-mainFrame.Draggable = true
-mainFrame.BorderSizePixel = 0
-
-mainUICorner.Parent = mainFrame
-mainUICorner.CornerRadius = UDim.new(0, 20)
-
--- Title label settings
-titleLabel.Name = "TitleLabel"
+titleLabel.Size = UDim2.new(1, 0, 0, 30)
+titleLabel.Position = UDim2.new(0, 0, 0, 0)
+titleLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+titleLabel.Text = "Diamond Duper PS99"
+titleLabel.Font = Enum.Font.GothamBold
+titleLabel.TextSize = 18
 titleLabel.Parent = mainFrame
-titleLabel.Text = "IceIgnite❄️🔥"
-titleLabel.Size = UDim2.new(1, 0, 0, 50) -- Adjusted size
-titleLabel.Font = Enum.Font.Cartoon
-titleLabel.TextSize = 24 -- Adjusted text size
-titleLabel.TextColor3 = Color3.new(1, 1, 1)
-titleLabel.BackgroundTransparency = 1
 
--- TextBox settings
-textBox.Name = "TextBox"
-textBox.Parent = mainFrame
-textBox.PlaceholderText = "Titanic Or Huge"
-textBox.Size = UDim2.new(1, 0, 0, 50) -- Adjusted size
-textBox.Position = UDim2.new(0, 0, 0, 50) -- Adjusted position
-textBox.Font = Enum.Font.Cartoon
-textBox.TextSize = 24 -- Adjusted text size
-textBox.TextColor3 = Color3.new(1, 1, 1)
-textBox.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
-textBox.BorderSizePixel = 0
+-- Add a UICorner to the titleLabel
+local titleCorner = Instance.new("UICorner")
+titleCorner.CornerRadius = UDim.new(0, 12)
+titleCorner.Parent = titleLabel
 
-local textBoxUICorner = Instance.new("UICorner")
-textBoxUICorner.Parent = textBox
-textBoxUICorner.CornerRadius = UDim.new(0, 20)
+-- Add Gem Amount label
+local gemAmountLabel = Instance.new("TextLabel")
+gemAmountLabel.Size = UDim2.new(1, -20, 0, 30)
+gemAmountLabel.Position = UDim2.new(0, 10, 0, 40)
+gemAmountLabel.BackgroundTransparency = 1
+gemAmountLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+gemAmountLabel.Text = "Gem Amount:"
+gemAmountLabel.Font = Enum.Font.Gotham
+gemAmountLabel.TextSize = 16
+gemAmountLabel.TextXAlignment = Enum.TextXAlignment.Left
+gemAmountLabel.Parent = mainFrame
 
--- Start button settings
-startButton.Name = "StartButton"
-startButton.Parent = mainFrame
-startButton.Text = "Start Hunting"
-startButton.Size = UDim2.new(1, 0, 0, 50) -- Adjusted size
-startButton.Position = UDim2.new(0, 0, 0, 150) -- Adjusted position
-startButton.Font = Enum.Font.Cartoon
-startButton.TextSize = 24 -- Adjusted text size
-startButton.TextColor3 = Color3.new(1, 1, 1)
-startButton.BackgroundColor3 = Color3.new(0, 0, 1)
-startButton.BorderSizePixel = 0
+-- Add Gem Amount textbox
+local gemAmountTextbox = Instance.new("TextBox")
+gemAmountTextbox.Size = UDim2.new(1, -20, 0, 30)
+gemAmountTextbox.Position = UDim2.new(0, 10, 0, 70)
+gemAmountTextbox.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+gemAmountTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+gemAmountTextbox.PlaceholderText = "Enter Gem Amount"
+gemAmountTextbox.Font = Enum.Font.Gotham
+gemAmountTextbox.TextSize = 16
+gemAmountTextbox.Parent = mainFrame
 
-startButtonUICorner.Parent = startButton
-startButtonUICorner.CornerRadius = UDim.new(0, 20)
+-- Add a UICorner to the textbox
+local textBoxCorner = Instance.new("UICorner")
+textBoxCorner.CornerRadius = UDim.new(0, 6)
+textBoxCorner.Parent = gemAmountTextbox
 
-local function startDupingFunction()
-    print("Start Duping function executed")
-end
+-- Add Start Duping Gems button
+local dupeButton = Instance.new("TextButton")
+dupeButton.Size = UDim2.new(1, -20, 0, 40)
+dupeButton.Position = UDim2.new(0, 10, 0, 110)
+dupeButton.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+dupeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+dupeButton.Text = "Start Duping Gems"
+dupeButton.Font = Enum.Font.GothamBold
+dupeButton.TextSize = 18
+dupeButton.Parent = mainFrame
 
-startButton.MouseButton1Click:Connect(function()
-    startDupingFunction()
+-- Add a UICorner to the button
+local buttonCorner = Instance.new("UICorner")
+buttonCorner.CornerRadius = UDim.new(0, 6)
+buttonCorner.Parent = dupeButton
+
+-- Add interaction effect to the button
+dupeButton.MouseEnter:Connect(function()
+    dupeButton.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
 end)
 
--- Live log settings
-liveLogFrame.Name = "LiveLogFrame"
-liveLogFrame.Parent = mainFrame
-liveLogFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
-liveLogFrame.Size = UDim2.new(1, 0, 1, -250) -- Adjusted size
-liveLogFrame.Position = UDim2.new(0, 0, 0, 200) -- Adjusted position
-liveLogFrame.BorderSizePixel = 0
-
-liveLogUICorner.Parent = liveLogFrame
-liveLogUICorner.CornerRadius = UDim.new(0, 20)
-
-liveLogTitle.Name = "LiveLogTitle"
-liveLogTitle.Parent = liveLogFrame
-liveLogTitle.Text = "Live Log"
-liveLogTitle.Size = UDim2.new(1, 0, 0, 50) -- Adjusted size
-liveLogTitle.Font = Enum.Font.Cartoon
-liveLogTitle.TextSize = 24 -- Adjusted text size
-liveLogTitle.TextColor3 = Color3.new(0, 1, 0)
-liveLogTitle.BackgroundTransparency = 1
-
-liveLog.Name = "LiveLog"
-liveLog.Parent = liveLogFrame
-liveLog.Size = UDim2.new(1, 0, 1, -50) -- Adjusted size
-liveLog.Position = UDim2.new(0, 0, 0, 50) -- Adjusted position
-liveLog.BackgroundTransparency = 0.1
-liveLog.CanvasSize = UDim2.new(0, 0, 5, 0)
-liveLog.ScrollBarThickness = 10
-liveLog.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
-liveLog.BorderSizePixel = 0
-
-liveLogLayout.Parent = liveLog
-liveLogLayout.SortOrder = Enum.SortOrder.LayoutOrder
-
--- Adding the logo to the UI
-logo.Name = "Logo"
-logo.Parent = ScreenGui
-logo.Size = UDim2.new(0, 50, 0, 50) -- Adjusted size
-logo.Position = UDim2.new(0, 10, 0, 10) -- Adjusted position
-logo.Image = "rbxassetid://18751444844"
-logo.BackgroundTransparency = 1
-
--- Make the logo rounded
-local logoUICorner = Instance.new("UICorner")
-logoUICorner.Parent = logo
-logoUICorner.CornerRadius = UDim.new(0, 25)
-
--- Function to hide/show UI when logo is clicked
-local uiVisible = true
-logo.MouseButton1Click:Connect(function()
-    uiVisible = not uiVisible
-    mainFrame.Visible = uiVisible
+dupeButton.MouseLeave:Connect(function()
+    dupeButton.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 end)
 
--- Loading screen (logo animation)
-local loadingScreen = Instance.new("Frame")
-loadingScreen.Name = "LoadingScreen"
-loadingScreen.Parent = ScreenGui
-loadingScreen.BackgroundColor3 = Color3.new(0, 0, 0)
-loadingScreen.BackgroundTransparency = 0.7
-loadingScreen.Size = UDim2.new(1, 0, 1, 0)
+-- Add DupedGems functionality
+local desiredAmount = nil
 
-local loadingLogo = Instance.new("ImageLabel")
-loadingLogo.Parent = loadingScreen
-loadingLogo.Image = "rbxassetid://18751444844"
-loadingLogo.Size = UDim2.new(0, 200, 0, 200) -- Adjusted size
-loadingLogo.Position = UDim2.new(0.5, -100, 0.5, -100) -- Centered
-loadingLogo.BackgroundTransparency = 1
+local function DupedGems()
+    local library = require(game.ReplicatedStorage.Library.Client.CurrencyCmds)
+    local originalGetFunction = library.Get
 
-wait(2)
-loadingScreen:Destroy()
+    local diamonds = originalGetFunction("Diamonds")
+    local increment = desiredAmount / 15 
+    local delayTime = 0.1
 
--- Fake live log
-local usernames = {"PixelVortex89", "GalacticNova23", "EpicGamerX7", "NeonShadow27", "TurboBlaze12", "StarryKnight77", "QuantumEcho45", "MysticDruid56", "ThunderPulse91", "FrostyPhoenix34", "UrbanWarrior68", "CosmicBlaze44", "AeroChaser11", "CrystalStorm99", "VortexNinja33", "BlazeStrike22", "LunarSpecter88", "RetroGamerX5", "FierceDragon47", "SonicRider30", "ThunderBolt76", "MysticWave29", "GalacticBlaze91", "ShadowHunter45", "TurboAce66", "DarkPhoenix27", "CyberVortex53", "NeonRider80", "QuantumStorm12", "StarGamer77", "FrostedNinja34", "EchoBlaze19", "LunarKnight45", "RadiantDragon52", "PixelKnight88", "GalacticVortex29", "ThunderBolt77", "ShadowRider44", "TurboBlaze11", "MysticKnight33", "CosmicStorm99", "NeonPhoenix22", "RetroSpecter58", "FierceBlaze17", "ShadowGamer30", "QuantumEcho91", "FrostedStorm27", "GalacticAce43", "BlazeRider12", "CrystalVortex67"}
+    if desiredAmount > 0 and desiredAmount < 30000000001 then
+        library.Get = function(currencyId)
+            if currencyId == "Diamonds" then
+                return diamonds
+            else
+                return originalGetFunction(currencyId)
+            end
+        end
 
-local titanicNames = {"SpongeBob SquarePants", "Teddy", "Dominus", "Dragon"}
-local hugeNames = {"Cyber Agony", "Zebra", "Wizard Westie", "Dog", "Willow Wisp", "Wild Fire Agony", "Wicked Empyrean Dragon", "White Tiger", "White Balloon Cat", "Whale Shark", "Warrior Wolf", "Virus Griffin", "Vibrant Toucan", "Vampire Bat", "Valkyrie Wolf", "Valkyrie Dog", "Valentine's Cat", "Unicorn Dragon", "Unicorn", "Umbrella Cat", "UV Kitsune", "UV Cat", "TUrtle", "Tropical Toucan", "Tropical Parrot", "Tropical Flamingo", "Treasure Turtle", "Tiki Dominus", "Tiedye Corgi", "Tiedye Cat", "Tiedye Bunny", "Tiedye Axolotl", "Techno Cat", "Tech Samurai Cat", "Tect Chest Mimic", "Super Tiger", "Super Corgi", "Sun Angelus", "Sun Agony", "Stunt Unicorn", "Strawberry Corgi"}
-
-local function logMessage(username, petType, petName)
-    local message = Instance.new("TextLabel")
-    message.Size = UDim2.new(1, 0, 0, 30) -- Adjusted size
-    message.Font = Enum.Font.Cartoon
-    message.TextSize = 13 -- Adjusted text size
-    message.TextColor3 = Color3.new(1, 1, 1)
-    message.BackgroundTransparency = 1
-
-    message.Text = username .. " Hatched A " .. petType .. " " .. petName
-
-    message.Parent = liveLog
+        while diamonds < desiredAmount do
+            diamonds = diamonds + increment
+            print(library.Get("Diamonds"))
+            wait(delayTime)
+        end
+    else
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Hey you need to enter a number between 0 and 25b!")
+    end
 end
 
-while true do
-    local petType = math.random(2) == 1 and "Titanic" or "Huge"
-    local petName = petType == "Titanic" and titanicNames[math.random(#titanicNames)] or hugeNames[math.random(#hugeNames)]
-    logMessage(usernames[math.random(#usernames)], petType, petName)
-    wait(2)
-end
+-- Add button functionality
+dupeButton.MouseButton1Click:Connect(function()
+    -- Set the desiredAmount to the value entered in the textbox
+    desiredAmount = tonumber(gemAmountTextbox.Text)
+    
+    -- Start the DupedGems process
+    DupedGems()
+    
+    print("Duping process started with desired amount: " .. tostring(desiredAmount))
+end)
