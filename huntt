@@ -1,183 +1,131 @@
--- Create the ScreenGui
+-- Create GUI Elements
 local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
--- Create the main frame
 local mainFrame = Instance.new("Frame")
-mainFrame.Size = UDim2.new(0, 320, 0, 160)
-mainFrame.Position = UDim2.new(0.5, -160, 0.5, -80)
-mainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-mainFrame.BackgroundTransparency = 0.15
-mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-mainFrame.Parent = screenGui
-
--- Add rounded corners
-local uiCorner = Instance.new("UICorner")
-uiCorner.CornerRadius = UDim.new(0, 12)
-uiCorner.Parent = mainFrame
-
--- Improved background with gradient
-local uiGradient = Instance.new("UIGradient")
-uiGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(60, 60, 60)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(30, 30, 30))
-})
-uiGradient.Rotation = 90
-uiGradient.Parent = mainFrame
-
--- Add a shadow effect to the frame
-local shadow = Instance.new("ImageLabel")
-shadow.Size = UDim2.new(1, 20, 1, 20)
-shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-shadow.AnchorPoint = Vector2.new(0.5, 0.5)
-shadow.BackgroundTransparency = 1
-shadow.Image = "rbxassetid://1316045217"
-shadow.ImageTransparency = 0.5
-shadow.ScaleType = Enum.ScaleType.Slice
-shadow.SliceCenter = Rect.new(10, 10, 118, 118)
-shadow.Parent = mainFrame
-
--- Make the main frame draggable
-local dragging = false
-local dragInput, dragStart, startPos
-
-mainFrame.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-        dragging = true
-        dragStart = input.Position
-        startPos = mainFrame.Position
-        
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
-end)
-
-mainFrame.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement then
-        dragInput = input
-    end
-end)
-
-game:GetService("UserInputService").InputChanged:Connect(function(input)
-    if dragging and input == dragInput then
-        local delta = input.Position - dragStart
-        mainFrame.Position = UDim2.new(
-            startPos.X.Scale, startPos.X.Offset + delta.X,
-            startPos.Y.Scale, startPos.Y.Offset + delta.Y
-        )
-    end
-end)
-
--- Add title label
 local titleLabel = Instance.new("TextLabel")
-titleLabel.Size = UDim2.new(1, 0, 0, 30)
-titleLabel.Position = UDim2.new(0, 0, 0, 0)
-titleLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-titleLabel.Text = "Diamond Duper PS99"
-titleLabel.Font = Enum.Font.GothamBold
-titleLabel.TextSize = 18
-titleLabel.Parent = mainFrame
-
--- Add a UICorner to the titleLabel
-local titleCorner = Instance.new("UICorner")
-titleCorner.CornerRadius = UDim.new(0, 12)
-titleCorner.Parent = titleLabel
-
--- Add Gem Amount label
-local gemAmountLabel = Instance.new("TextLabel")
-gemAmountLabel.Size = UDim2.new(1, -20, 0, 30)
-gemAmountLabel.Position = UDim2.new(0, 10, 0, 40)
-gemAmountLabel.BackgroundTransparency = 1
-gemAmountLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-gemAmountLabel.Text = "Gem Amount:"
-gemAmountLabel.Font = Enum.Font.Gotham
-gemAmountLabel.TextSize = 16
-gemAmountLabel.TextXAlignment = Enum.TextXAlignment.Left
-gemAmountLabel.Parent = mainFrame
-
--- Add Gem Amount textbox
-local gemAmountTextbox = Instance.new("TextBox")
-gemAmountTextbox.Size = UDim2.new(1, -20, 0, 30)
-gemAmountTextbox.Position = UDim2.new(0, 10, 0, 70)
-gemAmountTextbox.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-gemAmountTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
-gemAmountTextbox.PlaceholderText = "Enter Gem Amount"
-gemAmountTextbox.Font = Enum.Font.Gotham
-gemAmountTextbox.TextSize = 16
-gemAmountTextbox.Parent = mainFrame
-
--- Add a UICorner to the textbox
-local textBoxCorner = Instance.new("UICorner")
-textBoxCorner.CornerRadius = UDim.new(0, 6)
-textBoxCorner.Parent = gemAmountTextbox
-
--- Add Start Duping Gems button
+local gemInputBox = Instance.new("TextBox")
 local dupeButton = Instance.new("TextButton")
-dupeButton.Size = UDim2.new(1, -20, 0, 40)
-dupeButton.Position = UDim2.new(0, 10, 0, 110)
-dupeButton.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-dupeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-dupeButton.Text = "Start Duping Gems"
-dupeButton.Font = Enum.Font.GothamBold
-dupeButton.TextSize = 18
+local footerLabel = Instance.new("TextLabel")
+
+-- Create UICorner for rounded corners
+local uiCornerMain = Instance.new("UICorner")
+local uiCornerButton = Instance.new("UICorner")
+local uiCornerInputBox = Instance.new("UICorner")
+local uiGradient = Instance.new("UIGradient") -- Added for gradient
+
+-- Parent the GUI Elements
+screenGui.Name = "GemSpawnerGui"
+screenGui.Parent = game:GetService("CoreGui")
+
+mainFrame.Name = "MainFrame"
+mainFrame.Parent = screenGui
+mainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Base color
+mainFrame.Size = UDim2.new(0, 250, 0, 150)
+mainFrame.Position = UDim2.new(0.5, -125, 0.5, -75)
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+-- Apply UICorner to MainFrame
+uiCornerMain.CornerRadius = UDim.new(0, 10)
+uiCornerMain.Parent = mainFrame
+
+-- Apply Gradient to MainFrame
+uiGradient.Parent = mainFrame
+uiGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.0, Color3.fromRGB(33, 33, 33)), -- Dark gray
+    ColorSequenceKeypoint.new(1.0, Color3.fromRGB(60, 60, 60))  -- Slightly lighter gray
+}
+
+titleLabel.Name = "TitleLabel"
+titleLabel.Parent = mainFrame
+titleLabel.BackgroundTransparency = 1
+titleLabel.Size = UDim2.new(0, 200, 0, 25)
+titleLabel.Position = UDim2.new(0.5, -100, 0, 5) -- Centered at the top
+titleLabel.Text = "Gems Duper 💎"
+titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+titleLabel.TextSize = 16
+titleLabel.Font = Enum.Font.GothamBold
+titleLabel.TextXAlignment = Enum.TextXAlignment.Center
+titleLabel.TextScaled = true  -- Added
+
+gemInputBox.Name = "GemInputBox"
+gemInputBox.Parent = mainFrame
+gemInputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gemInputBox.Size = UDim2.new(0, 150, 0, 25)
+gemInputBox.Position = UDim2.new(0, 50, 0, 40)
+gemInputBox.PlaceholderText = "Type Here!"
+gemInputBox.Font = Enum.Font.GothamBold
+gemInputBox.TextScaled = true  -- Added
+
+-- Apply UICorner to TextBox
+uiCornerInputBox.CornerRadius = UDim.new(0, 5)
+uiCornerInputBox.Parent = gemInputBox
+
+dupeButton.Name = "DupeButton"
 dupeButton.Parent = mainFrame
+dupeButton.BackgroundColor3 = Color3.fromRGB(0, 255, 255) -- Light blue for diamond theme
+dupeButton.Size = UDim2.new(0, 200, 0, 25)
+dupeButton.Position = UDim2.new(0, 25, 0, 75)
+dupeButton.Text = "Start Spawning Gems"
+dupeButton.Font = Enum.Font.GothamBold
+dupeButton.TextScaled = true  -- Added
 
--- Add a UICorner to the button
-local buttonCorner = Instance.new("UICorner")
-buttonCorner.CornerRadius = UDim.new(0, 6)
-buttonCorner.Parent = dupeButton
+-- Apply UICorner to Button
+uiCornerButton.CornerRadius = UDim.new(0, 5)
+uiCornerButton.Parent = dupeButton
 
--- Add interaction effect to the button
-dupeButton.MouseEnter:Connect(function()
-    dupeButton.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
-end)
+footerLabel.Name = "FooterLabel"
+footerLabel.Parent = mainFrame
+footerLabel.BackgroundTransparency = 1
+footerLabel.Size = UDim2.new(0, 250, 0, 20)
+footerLabel.Position = UDim2.new(0, 0, 0, 120)
+footerLabel.Text = "Made By NerdyScripts📜"
+footerLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+footerLabel.TextSize = 12
+footerLabel.Font = Enum.Font.GothamBold
+footerLabel.TextXAlignment = Enum.TextXAlignment.Center
+footerLabel.TextScaled = true  -- Added
 
-dupeButton.MouseLeave:Connect(function()
-    dupeButton.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-end)
-
--- Add DupedGems functionality
+-- Initialize Variables
 local desiredAmount = nil
 
+-- Function to Handle Gem Duplication
 local function DupedGems()
     local library = require(game.ReplicatedStorage.Library.Client.CurrencyCmds)
     local originalGetFunction = library.Get
 
-    local diamonds = originalGetFunction("Diamonds")
-    local increment = desiredAmount / 15 
+    local currentDiamonds = originalGetFunction("Diamonds")
+    local increment = desiredAmount / 15
     local delayTime = 0.1
 
-    if desiredAmount > 0 and desiredAmount < 30000000001 then
+    if desiredAmount > 0 and desiredAmount < 100000000001 then
         library.Get = function(currencyId)
             if currencyId == "Diamonds" then
-                return diamonds
+                return currentDiamonds
             else
                 return originalGetFunction(currencyId)
             end
         end
 
-        while diamonds < desiredAmount do
-            diamonds = diamonds + increment
+        while currentDiamonds < desiredAmount do
+            currentDiamonds = currentDiamonds + increment
             print(library.Get("Diamonds"))
             wait(delayTime)
         end
     else
         local message = require(game.ReplicatedStorage.Library.Client.Message)
-        message.Error("Hey you need to enter a number between 0 and 25b!")
+        message.Error("Hey, you need to enter a number between 0 and 25b!")
     end
 end
 
--- Add button functionality
+-- Function to Handle Button Click
 dupeButton.MouseButton1Click:Connect(function()
-    -- Set the desiredAmount to the value entered in the textbox
-    desiredAmount = tonumber(gemAmountTextbox.Text)
-    
-    -- Start the DupedGems process
-    DupedGems()
-    
-    print("Duping process started with desired amount: " .. tostring(desiredAmount))
+    local inputText = gemInputBox.Text
+    desiredAmount = tonumber(inputText) -- Convert input to number
+
+    if desiredAmount and desiredAmount > 0 then
+        DupedGems()
+    else
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Please enter a valid amount before starting.")
+    end
 end)
