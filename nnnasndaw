@@ -73,7 +73,7 @@ option2UICorner.CornerRadius = UDim.new(0, 15)
 -- Option 3 settings
 option3.Name = "Option3"
 option3.Parent = loadingScreen
-option3.Text = "Titanic/Huge Hunting"
+option3.Text = "NEW Gem DUPER!"
 option3.Size = UDim2.new(0, 400, 0, 60)
 option3.Position = UDim2.new(0.5, -200, 0.6, 50)
 option3.Font = Enum.Font.Cartoon
