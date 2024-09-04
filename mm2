@@ -1,107 +1,124 @@
-	local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-	local Window = Rayfield:CreateWindow({
-		Name = "Multi Script By NerdyScripts📜",
-		LoadingTitle = "Loading UP",
-		LoadingSubtitle = "By NerdyScripts📜",
-		ConfigurationSaving = {
-		Enabled = true,
-		FolderName = nil, -- Create a custom folder for your hub/game
-		FileName = "Big Hub"
-		},
-		Discord = {
-		Enabled = true,
-		Invite = "u4V2tTqhy9", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-		RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-		},
-		KeySystem = true, -- Set this to true to use our key system
-		KeySettings = {
-		Title = "NerdyScripts📜",
-		Subtitle = "Key System",
-		Note = "Key is 'Nerdy'",
-		FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-		SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		Key = {"Nerdy"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-		}
-	})
-	local Tab = Window:CreateTab("Other Scripts", 110884920571815) -- Title, Image
-	local Section = Tab:CreateSection("Credit")
-	local Paragraph = Tab:CreateParagraph({Title = "Credits", Content = "Credit To All Owner Of The Scripts I Put In The HUB"})
-	local Section = Tab:CreateSection("BEST MM2 SCRIPTS🔪")
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Multi Script By NerdyScripts📜",
+    LoadingTitle = "Loading UP",
+    LoadingSubtitle = "By NerdyScripts📜",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil,
+        FileName = "Big Hub"
+    },
+    Discord = {
+        Enabled = true,
+        Invite = "u4V2tTqhy9",
+        RememberJoins = true
+    },
+    KeySystem = true,
+    KeySettings = {
+        Title = "NerdyScripts📜",
+        Subtitle = "Key System",
+        Note = "Key is 'Nerdy'",
+        FileName = "Key",
+        SaveKey = true,
+        GrabKeyFromSite = false,
+        Key = {"Nerdy"}
+    },
+    -- Add mobile support
+    ScreenGui = {
+        IgnoreGuiInset = false, -- Consider the top bar on mobile devices
+        SizeConstraint = "RelativeXY" -- Makes the UI scale properly on mobile devices
+    },
+})
 
-	local Button = Tab:CreateButton({
-		Name = "MM2 Auto Shoot By YARHM (Keyless)",
-		Callback = function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))()
-		end,
-	})
-	local Tab = Window:CreateTab("MM2 DUPE🤑", 113214333381063) -- Title, Image
-	local Section = Tab:CreateSection("NEWEST MM2 DUPING BY NerdyScripts📜")
-	local Button = Tab:CreateButton({
-		Name = "Dupe All KNIFE/GUN 🔪🔫",
-		Callback = function()
-			local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
+-- Check if the player is on a mobile device
+local isMobile = (game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled)
 
-local UIPath
-
-if LocalPlayer.PlayerGui.MainGUI.Game:FindFirstChild("Inventory") ~= nil then
-    UIPath = LocalPlayer.PlayerGui.MainGUI.Game.Inventory.Main
-else
-    UIPath = LocalPlayer.PlayerGui.MainGUI.Lobby.Screens.Inventory.Main
+if isMobile then
+    -- Adjust UI for mobile devices
+    Window:SetSize(UDim2.new(0.8, 0, 0.8, 0)) -- Set a smaller size
+    Window:SetPosition(UDim2.new(0.1, 0, 0.1, 0)) -- Center the UI on the screen
 end
 
-local function VisualDupe()
-    for i,v in pairs(UIPath.Weapons.Items.Container:GetChildren()) do
-        for i,v in pairs(v.Container:GetChildren()) do
-            if v.Name == "Christmas" or v.Name == "Halloween" then
+local Tab = Window:CreateTab("Other Scripts", 110884920571815)
+local Section = Tab:CreateSection("Credit")
+local Paragraph = Tab:CreateParagraph({Title = "Credits", Content = "Credit To All Owner Of The Scripts I Put In The HUB"})
+local Section = Tab:CreateSection("BEST MM2 SCRIPTS🔪")
+
+local Button = Tab:CreateButton({
+    Name = "MM2 Auto Shoot By YARHM (Keyless)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))()
+    end,
+})
+
+local Tab = Window:CreateTab("MM2 DUPE🤑", 113214333381063)
+local Section = Tab:CreateSection("NEWEST MM2 DUPING BY NerdyScripts📜")
+local Button = Tab:CreateButton({
+    Name = "Dupe All KNIFE/GUN 🔪🔫",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        local UIPath
+
+        if LocalPlayer.PlayerGui.MainGUI.Game:FindFirstChild("Inventory") ~= nil then
+            UIPath = LocalPlayer.PlayerGui.MainGUI.Game.Inventory.Main
+        else
+            UIPath = LocalPlayer.PlayerGui.MainGUI.Lobby.Screens.Inventory.Main
+        end
+
+        local function VisualDupe()
+            for i,v in pairs(UIPath.Weapons.Items.Container:GetChildren()) do
                 for i,v in pairs(v.Container:GetChildren()) do
-                    if v:IsA("Frame") then
-                        if v.ItemName.Label.Text ~= "Default Knife" and v.ItemName.Label.Text ~= "Default Gun" then
-                            local amount = v.Container.Amount.Text
-                            if amount == "" or amount == "None" then
-                                v.Container.Amount.Text = "x2"
-                            else
-                                local num = tonumber(amount:match("x(%d+)"))
-                                if num then
-                                    v.Container.Amount.Text = "x" .. tostring(num * 2)
+                    if v.Name == "Christmas" or v.Name == "Halloween" then
+                        for i,v in pairs(v.Container:GetChildren()) do
+                            if v:IsA("Frame") then
+                                if v.ItemName.Label.Text ~= "Default Knife" and v.ItemName.Label.Text ~= "Default Gun" then
+                                    local amount = v.Container.Amount.Text
+                                    if amount == "" or amount == "None" then
+                                        v.Container.Amount.Text = "x2"
+                                    else
+                                        local num = tonumber(amount:match("x(%d+)"))
+                                        if num then
+                                            v.Container.Amount.Text = "x" .. tostring(num * 2)
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    else
+                        if v:IsA("Frame") then
+                            if v.ItemName.Label.Text ~= "Default Knife" and v.ItemName.Label.Text ~= "Default Gun" then
+                                local amount = v.Container.Amount.Text
+                                if amount == "" or amount == "None" then
+                                    v.Container.Amount.Text = "x2"
+                                else
+                                    local num = tonumber(amount:match("x(%d+)"))
+                                    if num then
+                                        v.Container.Amount.Text = "x" .. tostring(num * 2)
+                                    end
                                 end
                             end
                         end
                     end
                 end
-            else
+            end
+            for i,v in pairs(UIPath.Pets.Items.Container.Current.Container:GetChildren()) do
                 if v:IsA("Frame") then
-                    if v.ItemName.Label.Text ~= "Default Knife" and v.ItemName.Label.Text ~= "Default Gun" then
-                        local amount = v.Container.Amount.Text
-                        if amount == "" or amount == "None" then
-                            v.Container.Amount.Text = "x2"
-                        else
-                            local num = tonumber(amount:match("x(%d+)"))
-                            if num then
-                                v.Container.Amount.Text = "x" .. tostring(num * 2)
-                            end
+                    local amount = v.Container.Amount.Text
+                    if amount == "" or amount == "None" then
+                        v.Container.Amount.Text = "x2"
+                    else
+                        local num = tonumber(amount:match("x(%d+)"))
+                        if num then
+                            v.Container.Amount.Text = "x" .. tostring(num * 2)
                         end
                     end
                 end
             end
         end
-    end
-    for i,v in pairs(UIPath.Pets.Items.Container.Current.Container:GetChildren()) do
-        if v:IsA("Frame") then
-            local amount = v.Container.Amount.Text
-            if amount == "" or amount == "None" then
-                v.Container.Amount.Text = "x2"
-            else
-                local num = tonumber(amount:match("x(%d+)"))
-                if num then
-                    v.Container.Amount.Text = "x" .. tostring(num * 2)
-                end
-            end
-        end
-    end
-end
-VisualDupe()
-		end,
-	 })
+        VisualDupe()
+    end,
+})
+
 local Paragraph = Tab:CreateParagraph({Title = "Warning❗", Content = "Make Sure To Be On Public Server To Make The DUPING WORK❗"})
