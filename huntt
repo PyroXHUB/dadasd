@@ -40,7 +40,7 @@ titleLabel.Parent = mainFrame
 titleLabel.BackgroundTransparency = 1
 titleLabel.Size = UDim2.new(0, 200, 0, 25)
 titleLabel.Position = UDim2.new(0.5, -100, 0, 5) -- Centered at the top
-titleLabel.Text = "Gems Duper 💎"
+titleLabel.Text = "GEMS DUPER💎"
 titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 titleLabel.TextSize = 16
 titleLabel.Font = Enum.Font.GothamBold
@@ -52,7 +52,7 @@ gemInputBox.Parent = mainFrame
 gemInputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 gemInputBox.Size = UDim2.new(0, 150, 0, 25)
 gemInputBox.Position = UDim2.new(0, 50, 0, 40)
-gemInputBox.PlaceholderText = "Type Here!"
+gemInputBox.PlaceholderText = "GEM AMOUNT!"
 gemInputBox.Font = Enum.Font.GothamBold
 gemInputBox.TextScaled = true  -- Added
 
@@ -65,7 +65,7 @@ dupeButton.Parent = mainFrame
 dupeButton.BackgroundColor3 = Color3.fromRGB(0, 255, 255) -- Light blue for diamond theme
 dupeButton.Size = UDim2.new(0, 200, 0, 25)
 dupeButton.Position = UDim2.new(0, 25, 0, 75)
-dupeButton.Text = "Start Spawning Gems"
+dupeButton.Text = "Start Duping Gems"
 dupeButton.Font = Enum.Font.GothamBold
 dupeButton.TextScaled = true  -- Added
 
@@ -88,44 +88,33 @@ footerLabel.TextScaled = true  -- Added
 -- Initialize Variables
 local desiredAmount = nil
 
--- Function to Handle Gem Duplication
-local function DupedGems()
-    local library = require(game.ReplicatedStorage.Library.Client.CurrencyCmds)
-    local originalGetFunction = library.Get
-
-    local currentDiamonds = originalGetFunction("Diamonds")
-    local increment = desiredAmount / 15
-    local delayTime = 0.1
-
-    if desiredAmount > 0 and desiredAmount < 100000000001 then
-        library.Get = function(currencyId)
-            if currencyId == "Diamonds" then
-                return currentDiamonds
-            else
-                return originalGetFunction(currencyId)
-            end
-        end
-
-        while currentDiamonds < desiredAmount do
-            currentDiamonds = currentDiamonds + increment
-            print(library.Get("Diamonds"))
-            wait(delayTime)
-        end
-    else
-        local message = require(game.ReplicatedStorage.Library.Client.Message)
-        message.Error("Hey, you need to enter a number between 0 and 25b!")
-    end
-end
-
 -- Function to Handle Button Click
 dupeButton.MouseButton1Click:Connect(function()
     local inputText = gemInputBox.Text
     desiredAmount = tonumber(inputText) -- Convert input to number
 
-    if desiredAmount and desiredAmount > 0 then
-        DupedGems()
+    if desiredAmount and desiredAmount > 0 and desiredAmount <= 25000000000 then
+        local library = require(game.ReplicatedStorage.Library.Client.CurrencyCmds)
+        local originalGetFunction = library.Get
+        local poop = originalGetFunction("Diamonds")
+        local increment = desiredAmount / 15
+        local delayTime = 0.1
+
+        library.Get = function(currencyId)
+            if currencyId == "Diamonds" then
+                return poop
+            else
+                return originalGetFunction(currencyId)
+            end
+        end
+
+        while poop < desiredAmount do
+            poop = poop + increment
+            print(library.Get("Diamonds"))
+            wait(delayTime)
+        end
     else
         local message = require(game.ReplicatedStorage.Library.Client.Message)
-        message.Error("Please enter a valid amount before starting.")
+        message.Error("Hey you need to enter a number between 0 and 25b!")
     end
 end)
