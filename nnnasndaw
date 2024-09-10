@@ -1,170 +1,582 @@
-local ScreenGui = Instance.new("ScreenGui")
-local loadingScreen = Instance.new("Frame")
-local loadingUICorner = Instance.new("UICorner")
-local titleLabel = Instance.new("TextLabel")
-local option1 = Instance.new("TextButton")
-local option1UICorner = Instance.new("UICorner")
-local option2 = Instance.new("TextButton")
-local option2UICorner = Instance.new("UICorner")
-local option3 = Instance.new("TextButton")
-local option3UICorner = Instance.new("UICorner")
-local closeButton = Instance.new("TextButton") -- New X button
-
--- Adding the ScreenGui to CoreGui
-ScreenGui.Parent = game.CoreGui
-
--- Loading screen settings
-loadingScreen.Name = "LoadingScreen"
-loadingScreen.Parent = ScreenGui
-loadingScreen.BackgroundColor3 = Color3.new(0, 0, 0)
-loadingScreen.BackgroundTransparency = 0.7
-loadingScreen.Size = UDim2.new(1, 0, 1, 0)
-
-loadingUICorner.Parent = loadingScreen
-loadingUICorner.CornerRadius = UDim.new(0, 15)
-
--- Title label settings
-titleLabel.Name = "TitleLabel"
-titleLabel.Parent = loadingScreen
-titleLabel.Text = "Choose What Script You Are Using Today"
-titleLabel.Size = UDim2.new(1, 0, 0, 60)
-titleLabel.Position = UDim2.new(0, 0, 0.2, 0)
-titleLabel.Font = Enum.Font.Cartoon
-titleLabel.TextSize = 36
-titleLabel.TextColor3 = Color3.new(1, 1, 1)
-titleLabel.TextStrokeTransparency = 0
-titleLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
-titleLabel.BackgroundTransparency = 1
-
--- Option 1 settings
-option1.Name = "Option1"
-option1.Parent = loadingScreen
-option1.Text = "Auto Farm/Auto Rank & More"
-option1.Size = UDim2.new(0, 400, 0, 60)
-option1.Position = UDim2.new(0.5, -200, 0.4, -50)
-option1.Font = Enum.Font.Cartoon
-option1.TextSize = 32
-option1.TextColor3 = Color3.new(1, 1, 1)
-option1.TextStrokeTransparency = 0
-option1.TextStrokeColor3 = Color3.new(0, 0, 0)
-option1.BackgroundColor3 = Color3.new(1, 0, 0)
-option1.BorderSizePixel = 0
-
-option1UICorner.Parent = option1
-option1UICorner.CornerRadius = UDim.new(0, 15)
-
--- Option 2 settings
-option2.Name = "Option2"
-option2.Parent = loadingScreen
-option2.Text = "Huge/Enchant Duping"
-option2.Size = UDim2.new(0, 400, 0, 60)
-option2.Position = UDim2.new(0.5, -200, 0.5, 0)
-option2.Font = Enum.Font.Cartoon
-option2.TextSize = 32
-option2.TextColor3 = Color3.new(1, 1, 1)
-option2.TextStrokeTransparency = 0
-option2.TextStrokeColor3 = Color3.new(0, 0, 0)
-option2.BackgroundColor3 = Color3.new(1, 0, 0)
-option2.BorderSizePixel = 0
-
-option2UICorner.Parent = option2
-option2UICorner.CornerRadius = UDim.new(0, 15)
-
--- Option 3 settings
-option3.Name = "Option3"
-option3.Parent = loadingScreen
-option3.Text = "NEW Gem DUPER!"
-option3.Size = UDim2.new(0, 400, 0, 60)
-option3.Position = UDim2.new(0.5, -200, 0.6, 50)
-option3.Font = Enum.Font.Cartoon
-option3.TextSize = 32
-option3.TextColor3 = Color3.new(1, 1, 1)
-option3.TextStrokeTransparency = 0
-option3.TextStrokeColor3 = Color3.new(0, 0, 0)
-option3.BackgroundColor3 = Color3.new(1, 0, 0)
-option3.BorderSizePixel = 0
-
-option3UICorner.Parent = option3
-option3UICorner.CornerRadius = UDim.new(0, 15)
-
--- Close button settings
-closeButton.Name = "CloseButton"
-closeButton.Parent = loadingScreen
-closeButton.Text = "X"
-closeButton.Size = UDim2.new(0, 50, 0, 50)
-closeButton.Position = UDim2.new(1, -60, 0, 10)
-closeButton.Font = Enum.Font.Cartoon
-closeButton.TextSize = 36
-closeButton.TextColor3 = Color3.new(1, 0, 0)
-closeButton.TextStrokeTransparency = 0
-closeButton.TextStrokeColor3 = Color3.new(0, 0, 0)
-closeButton.BackgroundColor3 = Color3.new(0, 0, 0)
-closeButton.BackgroundTransparency = 0.5
-closeButton.BorderSizePixel = 0
-
-local function autoFarmFunction()
-    print("Auto Farm function executed")
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/HGIOD/dadasd/main/huhuhuh'))()
-end
-
-local function autoRankFunction()
-    print("Auto Rank function executed")
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/dupee'))()
-        wait(1)
-        local lib = require(game.ReplicatedStorage.Library)
-
-		local fromPet = "Nuclear Squirrel"
-		local toPet = "Huge Mech Dino"
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Pet Simulator 99 - NerdyScripts📜", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Event",
+	Icon = "rbxassetid://91122277631744",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Color Event"
+})
+Tab:AddButton({
+	Name = "Auto Color Event (did all for you)",
+	Callback = function()
+        getgenv().KiTTYWARE_ColorWar = {
+			Farm_Zones = true,
+			Farming_Misc = {
+				Pets_Per_Breakable = 1,
+				Event_Specific = {
+					Color_Gifts = {Enabled = true, Minimum_Buckets = 75},
+					Clan_Points = {Enabled = false, Minimum_Buckets = 50},
+					Stay_Teams = {Enabled = true, Only_Winning = true},
+					Graffiti_Gifts = {Enabled = true},
+				},
+			},
+			Hatch_Eggs = true,
+			Hatching_Misc = {
+				discord_UserID = "",
+				hugeNotif_Webhook = "Enter your Webhook Url.",
+				hugeNotif_Enabled = false,
+				autoMail_User = "Enter your Username.",
+				autoMail_Enabled = false,
+			},
+			Farm_Minigame = true,
 		
-		for i,v in pairs(lib.Directory.Pets[fromPet]) do
-		  lib.Directory.Pets[fromPet][i] = nil
-		end
-		for i,v in pairs(lib.Directory.Pets[toPet]) do
-		  lib.Directory.Pets[fromPet][i] = v
-		end
-end
-
-local function autoZoneQuestFunction()
-    print("Auto Zone Quest function executed")
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/huntt'))()
-        wait(2)
-end
-
-option1.MouseButton1Click:Connect(function()
-    autoFarmFunction()
-    loadingScreen:Destroy()
-end)
-
-option2.MouseButton1Click:Connect(function()
-    autoRankFunction()
-    loadingScreen:Destroy()
-end)
-
-option3.MouseButton1Click:Connect(function()
-    autoZoneQuestFunction()
-    loadingScreen:Destroy()
-end)
-
--- Close button functionality
-closeButton.MouseButton1Click:Connect(function()
-    loadingScreen:Destroy()
-end)
-
--- Rainbow color function
-local function rainbowColorChange(object)
-    local runService = game:GetService("RunService")
-    local hue = 0
-
-    runService.RenderStepped:Connect(function()
-        hue = hue + 0.01
-        if hue > 1 then
-            hue = 0
-        end
-        object.BackgroundColor3 = Color3.fromHSV(hue, 1, 1)
-    end)
-end
-
--- Apply rainbow color change to options
-rainbowColorChange(option1)
-rainbowColorChange(option2)
-rainbowColorChange(option3)
+			StatsGui = false,
+			Fps_Boost1 = false,
+			Fps_Boost2 = false,
+		}
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/38e4778402a1d51414b40ab60274c5ed.lua"))()
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Optimization",
+	Icon = "rbxassetid://128431037719341",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Startup Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Instance",
+	Default = "None",
+	Options = {"ColorsInstance"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddSlider({
+	Name = "Avoid Break Time",
+	Min = 0,
+	Max = 60,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Seconds",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Join Instance",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Rendering Settings"
+})
+Tab:AddToggle({
+	Name = "Disable World Rendering",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable Pets Rendering",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable 3d Rendering",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable PlayerScripts(Will break some in-game Functionality)",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Farming Settings"
+})
+Tab:AddToggle({
+	Name = "Infinite Pet Speed",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable Drops Rendering",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable Items Notifications",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable Hatch Animation",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "GuiFX Settings"
+})
+Tab:AddToggle({
+	Name = "Disable Machines",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable Merchants",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable Confetti",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Disable SpinnyWheel",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Farming",
+	Icon = "rbxassetid://84230920381687",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Farming Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Zone",
+	Default = "None",
+	Options = {"0 - Current Zone", "0 - Best Unlocked", "0 - Best Instance", "99 - Rainbow Road", "98 - Colorful Clouds"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddSlider({
+	Name = "Pets Per Breakable",
+	Min = 0,
+	Max = 90,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Pets",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Start Farming",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Ultimate",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "ZoneUlti Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Movement",
+	Default = "Teleporting",
+	Options = {"Teleporting", "Walking"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Zone Movement",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Farming",
+	Icon = "rbxassetid://105872113521287",
+	PremiumOnly = false
+})
+Tab:AddDropdown({
+	Name = "Select Egg",
+	Default = "0 - Best Unlocked",
+	Options = {"0 - Best Unlocked", "0 - Best Instance"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddSlider({
+	Name = "Hatch Amount (0 for Max)",
+	Min = 1,
+	Max = 97,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Eggs",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Start Hatching",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Webhook Settings"
+})
+Tab:AddTextbox({
+	Name = "Discord Webhook",
+	Default = "Enter you Webhook URL",
+	TextDisappear = false,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+Tab:AddToggle({
+	Name = "Send Huge Hatches",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Mailbox Settings"
+})
+Tab:AddTextbox({
+	Name = "Roblox Username",
+	Default = "Enter your Username",
+	TextDisappear = false,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+Tab:AddToggle({
+	Name = "Send Huge Hatches",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Inventory",
+	Icon = "rbxassetid://83298468445522",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Consumables Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Fruits",
+	Default = "None",
+	Options = {"All", "Watermelon", "Candycane", "Apple", "Rainbow"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Use Fruits",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddDropdown({
+	Name = "Select Buffs",
+	Default = "None",
+	Options = {"All", "Toy Ball", "Toy Bone", "Squeaky Toy"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Use Buffs",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Flag Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Flag",
+	Default = "None",
+	Options = {"Golden Flag", "Hasty Flag", "Magnet Flag", "Exotic Treasure Flag", "Strength Flag"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Place Flags",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Potion Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Potions",
+	Default = "None",
+	Options = {"All", "Coins", "Lucky", "The Cocktail", "Huge"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Use Max Level",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Use Best Potions",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Item Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Spawnables",
+	Default = "None",
+	Options = {"Breakable Sprinkler", "TNT", "TNT Crate"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Use Spawnable",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddDropdown({
+	Name = "Select RandomEvents",
+	Default = "None",
+	Options = {"Comet", "Mini Pinata", "Mini Lucky Block", "Basic Item Jar", "Basic Coin Jar"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Use RandomEvent",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Openable Settings"
+})
+Tab:AddDropdown({
+	Name = "Select GiftBags",
+	Default = "None",
+	Options = {"All", "Rainbow Mini Chest", "Large Gift Bag", "Gift Bag", "Mini CHest"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Open 1 by 1",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Open GiftBags",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddDropdown({
+	Name = "Select Lootbox",
+	Default = "None",
+	Options = {"None"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Open Lootbox",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = "World",
+	Icon = "rbxassetid://140053344971368",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Instance Settings"
+})
+Tab:AddDropdown({
+	Name = "Select Seed",
+	Default = "None",
+	Options = {"Coin", "Potion"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Flower Garden",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "World Items"
+})
+Tab:AddButton({
+	Name = "Collect All Available Shiny Relics",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy All Available Upgrades",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Machines",
+	Icon = "rbxassetid://122548442562335",
+	PremiumOnly = false
+})
+Tab:AddParagraph("Note:","These features will not work upon updates that introduce new WORLDS, until developers add new machine locations")
+Tab:AddDropdown({
+	Name = "Select Method",
+	Default = "All Available Pets",
+	Options = {"Best Eggs Pets", "All Available Pets"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Start Goldening",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Start Rainbowing",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Other Scripts",
+	Icon = "rbxassetid://135521142733285",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "DUPING & MORE!"
+})
+Tab:AddButton({
+	Name = "Huge Duping (you can dupe huge and titanic)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/dupee'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Gems Spawner (you can use this gems to buy something just be fast)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/huntt'))()
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://97447207438791",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Interface Settings"
+})
+Tab:AddTextbox({
+	Name = "UI Scale",
+	Default = "0.9",
+	TextDisappear = false,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+local Section = Tab:AddSection({
+	Name = "Confic Settings"
+})
+Tab:AddToggle({
+	Name = "Auto Load Settings",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddButton({
+	Name = "Save Settings",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "Reset Settings",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "Copy Settings",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+OrionLib:Init()
