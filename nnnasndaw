@@ -535,6 +535,7 @@ Tab:AddButton({
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/dadasd/main/huntt'))()
   	end    
 })
+Tab:AddParagraph("NOTE:","If You Encounter Any Bugs Or Glitch Using The Script, Kindly Create A Support Ticket In Our Discord Server")
 local Tab = Window:MakeTab({
 	Name = "Settings",
 	Icon = "rbxassetid://97447207438791",
