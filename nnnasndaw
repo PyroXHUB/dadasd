@@ -9,35 +9,14 @@ local Section = Tab:AddSection({
 	Name = "Color Event"
 })
 Tab:AddButton({
-	Name = "Auto Color Event (did all for you)",
+	Name = "AUTOFARM SCRIPT(UPDATED)",
 	Callback = function()
-        getgenv().KiTTYWARE_ColorWar = {
-			Farm_Zones = true,
-			Farming_Misc = {
-				Pets_Per_Breakable = 1,
-				Event_Specific = {
-					Color_Gifts = {Enabled = true, Minimum_Buckets = 75},
-					Clan_Points = {Enabled = false, Minimum_Buckets = 50},
-					Stay_Teams = {Enabled = true, Only_Winning = true},
-					Graffiti_Gifts = {Enabled = true},
-				},
-			},
-			Hatch_Eggs = true,
-			Hatching_Misc = {
-				discord_UserID = "",
-				hugeNotif_Webhook = "Enter your Webhook Url.",
-				hugeNotif_Enabled = false,
-				autoMail_User = "Enter your Username.",
-				autoMail_Enabled = false,
-			},
-			Farm_Minigame = true,
-		
-			StatsGui = false,
-			Fps_Boost1 = false,
-			Fps_Boost2 = false,
-		}
-		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/38e4778402a1d51414b40ab60274c5ed.lua"))()
-  	end    
+			getgenv().AuthKey = "HUGE_vhk9ALxw2xYr"
+	getgenv().LoadSettings = {
+    	Example_Setting = Example_Value
+	}
+	loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
+	end    
 })
 local Tab = Window:MakeTab({
 	Name = "Optimization",
@@ -394,28 +373,63 @@ Tab:AddToggle({
 		print(Value)
 	end    
 })
+local selectedEvent = "None"  -- Variable to store the selected random event
+local isRunning = false  -- Flag to control whether the event consumption loop runs
+
+-- Function to handle random event usage
+local function useRandomEvent(eventType)
+    if eventType == "Mini Pinata" then
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("MiniPinata_Consume"):InvokeServer("a8060dbcf00d4f1e9d01306a471f6feb")
+    elseif eventType == "Comet" then
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Comet_Spawn"):InvokeServer("8bb1e47e3a8f4a149c8d190196fc7439")
+    elseif eventType == "Mini Lucky Block" then
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("MiniLuckyBlock_Consume"):InvokeServer("51537a0bbd554f7d898d98e3a5b62753")
+    elseif eventType == "Basic Item Jar" then
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CoinJar_Spawn"):InvokeServer("92b43592cd0c439a9261c178f9fe6d84")
+    end
+end
+
+-- Function to run the selected event in a loop
+local function runAutoUse()
+    while isRunning do
+        if selectedEvent ~= "None" then
+            useRandomEvent(selectedEvent)  -- Use the selected random event
+        end
+        wait(1)  -- Adjust the delay as needed
+    end
+end
+
+-- Dropdown to select the random event
 Tab:AddDropdown({
-	Name = "Select RandomEvents",
-	Default = "None",
-	Options = {"Comet", "Mini Pinata", "Mini Lucky Block", "Basic Item Jar", "Basic Coin Jar"},
-	Callback = function(Value)
-		print(Value)
-	end    
+    Name = "Select RandomEvents",
+    Default = "None",
+    Options = {"Comet", "Mini Pinata", "Mini Lucky Block", "Basic Item Jar", "Basic Coin Jar"},
+    Callback = function(Value)
+        selectedEvent = Value  -- Update the selected event
+        print("Selected Random Event:", Value)
+    end    
 })
+
+-- Toggle to start/stop the auto-use of the random event
 Tab:AddToggle({
-	Name = "Auto Use RandomEvent",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
+    Name = "Auto Use RandomEvent",
+    Default = false,
+    Callback = function(Value)
+        isRunning = Value  -- Update the loop control flag
+        print("Auto Use RandomEvent:", Value)
+        if isRunning then
+            runAutoUse()  -- Start the loop if toggle is on
+        end
+    end    
 })
+
 local Section = Tab:AddSection({
 	Name = "Openable Settings"
 })
 Tab:AddDropdown({
 	Name = "Select GiftBags",
 	Default = "None",
-	Options = {"All", "Rainbow Mini Chest", "Large Gift Bag", "Gift Bag", "Mini CHest"},
+	Options = {"All", "Graffiti Gift", "Charm Stone	", "Gift Bag", "Mini CHest"},
 	Callback = function(Value)
 		print(Value)
 	end    
