@@ -18,6 +18,21 @@ Tab:AddButton({
 	loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
 	end    
 })
+Tab:AddButton({
+	Name = "HUGEGAMES (BETA)",
+	Callback = function()
+			getgenv().AuthKey = "HUGE_vhk9ALxw2xYr"
+	getgenv().LoadSettings = {
+    	disable_globalhatch = false,
+    	loadFromEnv = false,
+    	ignoreSave = false,
+    	allowMultiExecution = true,
+    	ToggleBind = Enum.KeyCode.RightBracket,
+    	loadConfig = "CONFIG_NAME_HERE" -- Will not load unless the Config Exists
+	}
+
+	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3acbf8ea627f090532fc8af027438e17.lua"))()
+})
 local Tab = Window:MakeTab({
 	Name = "Optimization",
 	Icon = "rbxassetid://128431037719341",
