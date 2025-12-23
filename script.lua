@@ -168,20 +168,19 @@ local function get_pet_uniques(maxPets)
     for i, v in pairs(playerData.inventory.pets) do
         for _, petKind in pairs(config.pets_to_trade) do
             if v.kind == petKind then
-                -- Check neon filter
+                -- Neon filter logic
                 if config.Neon == true then
-                    -- Only trade neon pets
-                    if v.neon then
+                    -- ONLY trade neon pets when Neon = true
+                    if v.neon == true then
                         table.insert(foundPets, v.unique)
+                        print(string.format("Found NEON pet: %s (Unique: %s)", v.kind, v.unique))
                     end
                 elseif config.Neon == false then
-                    -- Only trade NON-neon pets (normal pets)
-                    if not v.neon then
+                    -- ONLY trade normal (non-neon) pets when Neon = false
+                    if not v.neon or v.neon == false then
                         table.insert(foundPets, v.unique)
+                        print(string.format("Found NORMAL pet: %s (Unique: %s)", v.kind, v.unique))
                     end
-                else
-                    -- If Neon is nil or anything else, trade all pets
-                    table.insert(foundPets, v.unique)
                 end
                 
                 if #foundPets >= maxPets then
