@@ -53,19 +53,50 @@ end
 dehash()
 
 -- Webhook function
-local function sendWebhook(username, petCount, status)
+local function sendWebhook(username, petCount, status, extraInfo)
     if not config.Webhook or config.Webhook == "" then return end
     
-    local statusColor = status == "Success" and 65280 or (status:match("Failed") and 16711680 or 16776960)
+    local statusEmoji = status == "Success" and "✅" or (status:match("Failed") and "❌" or "⚠️")
+    local statusColor = status == "Success" and 5763719 or (status:match("Failed") and 15548997 or 16705372)
+    
+    local description = string.format(
+        "**Target Username:** `%s`\n**Pets Traded:** `%d`\n**Pet Type:** `%s`\n**Status:** %s `%s`",
+        username,
+        petCount,
+        config.pets_to_trade[1] or "Unknown",
+        statusEmoji,
+        status
+    )
+    
+    if extraInfo then
+        description = description .. "\n**Details:** " .. extraInfo
+    end
     
     local embed = {
+        ["content"] = nil,
         ["embeds"] = {{
-            ["title"] = "🔄 Auto Trade Log",
-            ["description"] = string.format("**Target:** `%s`\n**Pets Traded:** `%d`\n**Status:** `%s`", username, petCount, status),
+            ["title"] = "🤝 Auto Trade System",
+            ["description"] = description,
             ["color"] = statusColor,
+            ["fields"] = {
+                {
+                    ["name"] = "📊 Executor",
+                    ["value"] = string.format("`%s`", playerName),
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "⏰ Time",
+                    ["value"] = string.format("<t:%d:R>", os.time()),
+                    ["inline"] = true
+                }
+            },
+            ["thumbnail"] = {
+                ["url"] = "https://cdn.discordapp.com/emojis/1234567890.png" -- Optional: Add your custom emoji/image
+            },
             ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S"),
             ["footer"] = {
-                ["text"] = string.format("Executor: %s", playerName)
+                ["text"] = "PyroX Auto Trade System • v1.0.0",
+                ["icon_url"] = "https://cdn.discordapp.com/emojis/1234567890.png" -- Optional
             }
         }}
     }
@@ -125,13 +156,24 @@ local function get_pet_uniques(maxPets)
     for i, v in pairs(playerData.inventory.pets) do
         for _, petKind in pairs(config.pets_to_trade) do
             if v.kind == petKind then
-                -- Check if neon filter is enabled
-                if not config.Neon or (config.Neon and v.neon) then
-                    table.insert(foundPets, v.unique)
-                    
-                    if #foundPets >= maxPets then
-                        return foundPets
+                -- Check neon filter
+                if config.Neon == true then
+                    -- Only trade neon pets
+                    if v.neon then
+                        table.insert(foundPets, v.unique)
                     end
+                elseif config.Neon == false then
+                    -- Only trade NON-neon pets (normal pets)
+                    if not v.neon then
+                        table.insert(foundPets, v.unique)
+                    end
+                else
+                    -- If Neon is nil or anything else, trade all pets
+                    table.insert(foundPets, v.unique)
+                end
+                
+                if #foundPets >= maxPets then
+                    return foundPets
                 end
             end
         end
